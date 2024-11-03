@@ -1,0 +1,64 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: #4A5568; /* text-gray-800 */
+}
+header {
+    text-align: center;
+    padding: 3rem 0; /* py-12 */
+}
+header p {
+    color: #6B46C1; /* text-purple-600 */
+    font-weight: 600; /* font-semibold */
+}
+header h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: bold; /* font-bold */
+    color: #1A202C; /* text-gray-900 */
+    margin-top: 0.5rem; /* mt-2 */
+}
+header p.description {
+    color: #A0AEC0; /* text-gray-500 */
+    margin-top: 1rem; /* mt-4 */
+    max-width: 40rem; /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+main {
+    max-width: 90rem; /* max-w-6xl */
+    margin: 0 auto;
+    padding: 0 1rem; /* px-4 */
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+}
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+    }
+}
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-4 */
+    }
+}
+.card {
+    text-align: center;
+}
+.card img {
+    width: 6rem; /* w-24 */
+    height: 6rem; /* h-24 */
+    border-radius: 50%; /* rounded-full */
+    margin: 0 auto;
+}
+.card h2 {
+    margin-top: 1rem; /* mt-4 */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1A202C; /* text-gray-900 */
+}
+.card p {
+    color: #6B46C1; /* text-purple-600 */
+}

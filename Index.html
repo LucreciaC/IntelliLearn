@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/responsive.css" />
+    <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>IntelliLearn</title>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="menuIcon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-logo">
+                <img alt="Logo" class="logo" src="/IMG/Logo.png"/>
+            </div>
+            <ul class="navbar-menu">
+                <li>
+                    <a class="dropdown-toggle" href="#">
+                        Explorar cursos
+                        <span class="arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                Desarrollo
+                                <span class="arrow-right">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Frontend</a></li>
+                                <li><a href="#">Backend</a></li>
+                                <li><a href="#">Full Stack</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Diseño
+                                <span class="arrow-right">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Diseño Web</a></li>
+                                <li><a href="#">WordPress</a></li>
+                                <li><a href="#">Pixel Art</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Marketing
+                                <span class="arrow-right">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Marketing Digital</a></li>
+                                <li><a href="#">Youtube Marketing</a></li>
+                                <li><a href="#">Estrategias de Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Negocios
+                                <span class="arrow-right">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                            <ul class="sub-dropdown-menu">
+                                <li><a href="#">Freelancing</a></li>
+                                <li><a href="#">Liderazgo</a></li>
+                                <li><a href="#">Estrategias de Negocios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+            </ul>
+            <div class="navbar-auth">
+                <a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a>
+                <a href="/PAGES/Registrarse.html">Registrarme</a>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" onclick="toggleMenu()">
+            <button class="close-btn" onclick="toggleMenu()">&times;</button>
+        </div>
+        <div class="navbarMobile" id="navbarMobile">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <div class="separator"></div>
+                <div class="explore-title">Explorar cursos</div>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('desarrollo')">Desarrollo<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('diseno')">Diseño<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('marketing')">Marketing<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('negocios')">Negocios<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <div class="separator"></div>
+                <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
+                <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="desarrollo" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="#">Frontend</a></li>
+                <li><a href="#">Backend</a></li>
+                <li><a href="#">Full Stack</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="diseno" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="#">Diseño Web</a></li>
+                <li><a href="#">WordPress</a></li>
+                <li><a href="#">Pixel Art</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="marketing" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="#">Marketing Digital</a></li>
+                <li><a href="#">Youtube Marketing</a></li>
+                <li><a href="#">Estrategias de Marketing</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="negocios" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="#">Freelancing</a></li>
+                <li><a href="#">Liderazgo</a></li>
+                <li><a href="#">Estrategias de Negocios</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Cuerpo-->
+
+    <section class="hero-section">
+        <div>
+            <h1>Empieza Hoy<br>Transforma tu forma de aprender y enseñar.</h1>
+            <p>Regístrate ahora y comienza a explorar el potencial de IntelliLearn.<br>Con cursos interactivos, recursos multimedia y evaluaciones en tiempo real, cada usuario puede adaptar su camino educativo.</p>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="¿Qué deseas aprender?">
+            <img src="/IMG/Group 39880.png" alt="Buscar">
+        </div>
+    </section>
+
+    <section class="partner-logos">
+        <img src="/IMG/UTN (2).png" alt="UTN">
+        <img src="/IMG/Congreso.png" alt="UC">
+        <img src="/IMG/Champagnat (2).png" alt="Universidad Champagnat">
+        <img src="/IMG/Aconcagua.png" alt="Universidad del Aconcagua">
+        <img src="/IMG/MAza (2).png" alt="Universidad Maza">
+        <img src="/IMG/Universidad de mendoza.png" alt="Universidad de Mendoza">
+    </section>
+
+    <div class="features" style="text-align: center; margin: 0 auto;">
+        <h2>¿Por qué IntelliLearn es la solución perfecta para tu aprendizaje?</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Experiencia Personalizada
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Contenido Interactivo
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Flexibilidad Total
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Evaluación Efectiva
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Comunidad Activa
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Soporte Dedicado
+            </li>
+            <li style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <i class="fas fa-check"></i> Credibilidad
+            </li>
+        </ul>
+    </div>
+    
+    <footer style="width: 100%; padding: 20px; background: #FFDB83; border-top: 1px #D9D9D9 solid; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <!-- Iconos de redes sociales en blanco y negro y más pequeños -->
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+            <!-- Facebook -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="black" height="25" width="25"><path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"/><path fill="#FFF" d="m25 23 .8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"/></svg>
+            
+            <!-- Twitter -->
+            <svg viewBox="0 0 256 209" width="25" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M256 25.45c-9.42 4.177-19.542 7-30.166 8.27 10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52 0 4.117.465 8.125 1.36 11.97-43.65-2.191-82.35-23.1-108.255-54.876-4.52 7.757-7.11 16.78-7.11 26.404 0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661 0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475-17.975 14.086-40.622 22.483-65.228 22.483-4.24 0-8.42-.249-12.529-.734 23.243 14.902 50.85 23.597 80.51 23.597 96.607 0 149.434-80.031 149.434-149.435 0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45" fill="black"/></svg>
+            
+            <!-- Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path fill="black" d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.601c-23.661 0-42.87-19.208-42.87-42.87 0-23.66 19.209-42.87 42.87-42.87 23.661 0 42.87 19.21 42.87 42.87 0 23.662-19.209 42.87-42.87 42.87Zm81.317-109.195a15.36 15.36 0 1 1-30.72 0 15.36 15.36 0 0 1 30.72 0Z"/></svg>
+            
+            <!-- LinkedIn -->
+            <svg width="25" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="black"/></svg>
+
+            <!-- Youtube -->
+            <svg viewBox="0 0 256 180" width="25" height="25" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z" fill="black"/><path fill="#FFF" d="m102.421 128.06 66.328-38.418-66.328-38.418z"/></svg>
+        </div>
+    
+        <!-- Texto de derechos de autor centrado -->
+    <div style="color: #6D758F; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 22px;">
+        <span>Copyright © 2025 IntelliLearn</span>
+        <span style="color: #E1E4ED;"> | </span>
+        <span>All Rights Reserved</span>
+    </div>
+</footer>
+    
+   
+    <script src="/JavaScript/navbar-menu.js"></script>
+
+    <script>
+const menuStructure = {
+    main: `
+        
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li class="separator"></li>
+            <li><a href="#" class="bold">Explorar cursos</a></li>
+            <li><a href="#" onclick="toggleSubMenu('development')" class="with-arrow">Desarrollo <span class="arrow">→</span></a></li>
+            <li><a href="#" onclick="toggleSubMenu('design')" class="with-arrow">Diseño <span class="arrow">→</span></a></li>
+            <li><a href="#" onclick="toggleSubMenu('marketing')" class="with-arrow">Marketing <span class="arrow">→</span></a></li>
+            <li><a href="#" onclick="toggleSubMenu('business')" class="with-arrow">Negocios <span class="arrow">→</span></a></li>
+            <li class="separator"></li>
+            <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+            <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
+            <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
+        </ul>
+    `,
+    explore: `
+        <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+        <div class="explore-title">Explorar cursos</div>
+        <ul>
+            <li><a href="#" onclick="toggleSubMenu('development')">Desarrollo</a></li>
+            <li><a href="#" onclick="toggleSubMenu('design')">Diseño</a></li>
+            <li><a href="#" onclick="toggleSubMenu('marketing')">Marketing</a></li>
+            <li><a href="#" onclick="toggleSubMenu('business')">Negocios</a></li>
+        </ul>
+    `,
+    development: `
+        <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+        <div class="explore-title">Desarrollo</div>
+        <ul>
+            <li><a href="/cursos/web">Desarrollo Web</a></li>
+            <li><a href="/cursos/mobile">Desarrollo Móvil</a></li>
+            <li><a href="/cursos/javascript">JavaScript</a></li>
+        </ul>
+    `,
+    design: `
+        <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+        <div class="explore-title">Diseño</div>
+        <ul>
+            <li><a href="/cursos/ux-ui">UX/UI Design</a></li>
+            <li><a href="/cursos/graphic-design">Diseño Gráfico</a></li>
+        </ul>
+    `,
+    marketing: `
+        <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+        <div class="explore-title">Marketing</div>
+        <ul>
+            <li><a href="/cursos/digital-marketing">Marketing Digital</a></li>
+            <li><a href="/cursos/social-media">Social Media</a></li>
+        </ul>
+    `,
+    business: `
+        <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+        <div class="explore-title">Negocios</div>
+        <ul>
+            <li><a href="/cursos/entrepreneurship">Emprendimiento</a></li>
+            <li><a href="/cursos/finance">Finanzas</a></li>
+        </ul>
+    `
+};
+
+function toggleMenu() {
+    const menuIcon = document.querySelector('.menuIcon');
+    const navbarMobile = document.querySelector('.navbarMobile');
+    const overlay = document.querySelector('.overlay');
+    
+    menuIcon.classList.toggle('active');
+    navbarMobile.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+    if (navbarMobile.classList.contains('active')) {
+        showMainMenu();
+    }
+}
+
+function toggleSubMenu(menuType) {
+    const navbarMobile = document.querySelector('.navbarMobile');
+    navbarMobile.innerHTML = menuStructure[menuType] || menuStructure.main;
+}
+
+function showMainMenu() {
+    toggleSubMenu('main');
+}
+
+// Event listener para cerrar el menú al hacer clic en el overlay
+document.querySelector('.overlay').addEventListener('click', toggleMenu);
+        </script>
+</body>
+</html>

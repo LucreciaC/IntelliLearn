@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+/* Logo */
+.navbar-logo {
+    position: absolute;
+    top: 20px;  /* Añade esta línea para posicionar desde arriba */
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+  
+  .navbar-logo .logo {
+    width: 249px;
+    height: 137px;
+    object-fit: cover;
+  }
+  
+
+.container {
+    background-color: #FFEAB6;
+    padding: 20px;
+    width: 360px;
+    border-radius: 3rem;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="email"] {
+    width: 90%;
+    padding: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.role-selection {
+    margin-bottom: 20px;
+}
+.role-selection label {
+    margin-right: 10px;
+}
+.role-selection input {
+    margin-right: 5px;
+}
+.register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #b3c6cc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.register-button:hover {
+    background-color: #99aabb;
+}
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.social-login button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-login .google {
+    background-color: #A7C5C5;
+    color: white;
+}
+.social-login .microsoft {
+    background-color: #A7C5C5;
+    color: white;
+}
+.social-login .google img, .social-login .microsoft img {
+    width: 20px;
+    margin-right: 5px;
+}
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+.login-link a {
+    color: blue;
+    text-decoration: none;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
