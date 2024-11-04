@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/registrarseProfesor.css" />
-    <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
     <title>Registrarse</title>
 </head>
 <body>
     <body>
         <div class="navbar-logo">
             <a href="/Index.html">
-                <img alt="Logo" class="logo" src="/IMG/Logo.png"/>
+                <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
             </a>
         </div>
         <div class="container">
          <h2>
           Registrarse
          </h2>
-         <input placeholder="Area de especializacion" type="text"/>
-         <input placeholder="Nivel academico" type="text"/>
+         <div class="mb-3">
+            <label for="disabledSelect" class="form-label">Disabled select menu</label>
+            <select id="disabledSelect" class="form-select">
+              <option><input placeholder="Area de especializacion" type="text"/></option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="disabledSelect" class="form-label">Disabled select menu</label>
+            <select id="disabledSelect" class="form-select">
+              <option><input placeholder="Nivel academico" type="text"/></option>
+            </select>
+          </div>
+         
          <input placeholder="Numero de telefono" type="number"/>
          <input placeholder="Institucion (opcional)" type="text"/>
         

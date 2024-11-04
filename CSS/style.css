@@ -1,3 +1,32 @@
+/* Estilo para la sección de introducción */
+.intro {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir toda la sección */
+}
+
+/* Estilo para el contenido de la página principal */
+.home-content {
+  display: none; /* Oculta inicialmente */
+  padding: 20px;
+}
+
+/* Mostrar el contenido de la home después de hacer scroll */
+body:has(.intro) .home-content {
+  display: block;
+}
+
+
 /* Estilo general del navbar */
 * {
     margin: 0;
@@ -283,17 +312,20 @@
           align-items: center;
       }
       .features ul li {
-          font-size: 18px;
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          width: 300px; /* Ensures all items are the same width */
-          justify-content: flex-start; /* Aligns items to the left */
-      }
-      .features ul li i {
-          color: #000;
-          margin-right: 10px;
-      }
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center; /* Alinea el icono y el texto verticalmente */
+        width: 250px;
+        justify-content: center; /* Centra el contenido en el medio */
+        text-align: left; /* Alinea el texto a la izquierda del icono */
+    }
+    .features ul li i {
+      color: #000;
+      margin-right: 150px; /* Agrega espacio a la derecha del ícono */
+      min-width: 100 px; /* Establece un ancho mínimo para alinear los íconos */
+      text-align: center;
+  }
 
 
   .footer{
