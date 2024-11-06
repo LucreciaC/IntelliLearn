@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesion</title>
     <link rel="stylesheet" href="/CSS/iniciosesion.css" />
-    <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
 
     <header class="header">
-        <img class="logo" src="/IMG/Logo.png" alt="Logo">
+        <img class="logo" src="/ASSETS/Images/Logo.png" alt="Logo">
     </header>
 
     <body class="bg-yellow-100 flex items-center justify-center min-h-screen">
@@ -21,10 +21,17 @@
             </header>
             <h2 class="text-2xl font-bold mb-4">Inicio de sesión</h2>
             <form>
-                <input class="w-full p-2 mb-4 border rounded" placeholder="Nombre de usuario" type="text" required />
+                <div class="input-group has-validation">
+                    <div class="form-floating is-invalid">
+                      <input type="text" class="w-full p-2 mb-4 border rounded" id="floatingInputGroup2" placeholder="Username" required> 
+                      
+                    </div>
+                    
+                  </div>
+
                 <input class="w-full p-2 mb-2 border rounded" placeholder="Contraseña" type="password" required />
                 <div class="mb-4"></div> <!-- Espacio arriba -->
-                <a class="text-blue-600 text-sm block" href="/PAGES/recuperarContraseña.html">¿Ha perdido su contraseña?</a>
+                <a class="text-blue-600 text-sm block" href="/HTML/recuperarContraseña.html">¿Ha perdido su contraseña?</a>
                 <div class="mb-4"></div> <!-- Espacio abajo -->
                 <button class="w-full bg-gray-300 text-lg py-2 rounded mb-4" type="submit">Inicio de Sesión</button>
             </form>
@@ -43,7 +50,7 @@
             </div>
             <div class="text-center text-sm">
                 ¿Es su primera vez aquí?
-                <a class="text-blue-600" href="/PAGES/Registrarse.html">Regístrate haciendo click</a>
+                <a class="text-blue-600" href="/HTML/Registrarse.html">Regístrate haciendo click</a>
             </div>
         </div>       
 </body>
