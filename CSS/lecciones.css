@@ -1,0 +1,498 @@
+
+/* Estilo general del navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.navbar {
+    height: 100px;
+    background-color: #ffeab6;
+    display: flex;
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: center; /* Centramos horizontalmente el contenido */
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center; /* Alinea el logo verticalmente también */
+  }
+  
+  .navbar-logo .logo {
+    width: 249px;
+    height: 137px;
+    object-fit: cover;
+  }
+  
+  /* Menú de navegación centrado */
+  .navbar-menu {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 255px;
+    align-items: center; /* Centramos verticalmente las opciones del menú */
+    flex-grow: 1;
+    list-style: none; /* Eliminar puntos de la lista */
+  }
+  
+  .navbar-menu li {
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.navbar-menu li:hover .dropdown-menu {
+    display: block; /* Muestra el menú al pasar el mouse */
+}
+
+.dropdown-menu li {
+    margin: 0; 
+}
+
+.navbar-menu a {
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 10px 15px; /* Espacio alrededor del texto */
+    transition: background-color 0.3s; /* Efecto suave al cambiar de fondo */
+}
+
+/* Hover para enlaces del menú principal */
+.navbar-menu a:hover {
+    background-color: rgba(255, 213, 107, 0.5); /* Fondo suave al pasar el mouse */
+}
+
+/* Estilos del menú desplegable */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Se coloca debajo del elemento padre */
+    top: 100%; /* Se coloca justo debajo del menú */
+    left: 0; /* Alineado a la izquierda */
+    width: 235px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.01); /* Sombra solo en la parte inferior */
+    background-color: #ffeab6; /* Mismo color de fondo que la navbar */
+    padding: 10px 0; /* Espacio alrededor del menú */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.navbar-menu li:hover .dropdown-menu {
+    display: block; /* Muestra el menú al pasar el mouse */
+}
+
+.dropdown-menu li {
+    margin: 0; 
+    list-style: none; 
+}
+
+/* Estilos de los enlaces del menú desplegable */
+.dropdown-menu a {
+  display: flex; /* Flex para alinear texto e ícono */
+  justify-content: space-between; /* Espacio entre texto y flecha */
+  align-items: center; /* Centra verticalmente el texto e ícono */
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 100%; /* Asegura que ocupe todo el ancho del menú */
+  box-sizing: border-box;
+}
+
+/* Hover para enlaces del menú desplegable */
+.dropdown-menu a:hover {
+    background-color: rgba(255, 213, 107, 0.7); /* Color de fondo al pasar el mouse */
+}
+/* Estilos de la flecha */
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s; /* Suaviza la rotación */
+}
+
+.arrow i {
+    font-size: 18px; /* Tamaño de la flecha */
+}
+
+
+/* Flecha para submenú a la derecha */
+.arrow-right {
+  font-size: 14px;
+    color: #000;
+}
+
+
+/* Cambiar la dirección de la flecha cuando el mouse está sobre el menú */
+.navbar-menu li:hover .arrow i {
+    transform: rotate(180deg); /* Rota la flecha hacia arriba */
+}
+
+/* Estilos del submenú */
+.sub-dropdown-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Aparece al lado derecho del menú principal */
+  width: 200px;
+  background-color: #ffeab6;
+}
+
+.dropdown-menu li:hover .sub-dropdown-menu {
+  display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+.sub-dropdown-menu a {
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.sub-dropdown-menu a:hover {
+  background-color: rgba(255, 213, 107, 0.7); /* Fondo suave al pasar el mouse */
+}
+
+/* Ajustes de flechas para multinivel */
+.dropdown-menu li:hover .arrow i {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+  /* Sección de autenticación (Iniciar sesión, Registrarme) */
+  .navbar-auth {
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    right: 20px;
+    align-items: center; /* Alinea verticalmente las opciones de autenticación */
+  }
+  
+  .navbar-auth a {
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s; /* Efecto suave al cambiar de fondo */
+  }
+
+  /* Hover para enlaces del menú principal */
+.navbar-auth a:hover {
+    background-color: rgba(255, 213, 107, 0.5); /* Fondo suave al pasar el mouse */
+}
+
+
+.header .navbar  .icons {
+    display: flex;
+    align-items: center;
+}
+.header .navbar  .icons i {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f8d77d;
+    padding: 10px;
+    border-radius: 30%;
+}
+.header .navbar  .icons .fa-envelope {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-cog {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-user-circle {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+
+/*RESPONSIVE DEL NAVBAR */
+.menuIcon {
+    cursor: pointer;
+    width: 32px;  /* Reducido de 42px */
+    height: 24px; /* Reducido de 32px */
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
+    z-index: 1001;
+}
+
+.menuIcon span {
+    display: block;
+    width: 100%;
+    height: 3.5px; /* Reducido de 4.5px */
+    background-color: #000;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+}
+
+.menuIcon span:nth-child(1) {
+    transform: translateY(-8px); /* Reducido de -10px */
+}
+
+.menuIcon span:nth-child(3) {
+    transform: translateY(8px); /* Reducido de 10px */
+}
+
+/* Animación ajustada para la X */
+.menuIcon.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menuIcon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menuIcon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.navbarMobile {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    width: 50%; /* Cambiado de 100% a 50% */
+    height: 100%;
+    top: 0;
+    right: 0; /* Cambiado de left: 0 a right: 0 */
+    z-index: 1000;
+    overflow-y: auto;
+   
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbarMobile.active {
+    display: flex;
+    
+}
+.navbarMobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbarMobile ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Superposición */
+.overlay {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block; /* Mostrar la superposición cuando está activa */
+}
+
+/* Ajustes de estilo adicionales */
+.separator {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.explore-title {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbarMobile .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+.explore-title {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.navbarMobile ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbarMobile ul li a:hover {
+    background-color: #f5f5f5;
+}
+@media (max-width: 768px) {
+    .navbar-menu,
+    .navbar-auth {
+        display: none;
+    }
+    .menuIcon {
+        display: flex;
+    }
+}
+
+/* Resto de la pagina */
+
+
+
+
+
+
+
+
+
+
+
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 14px;
+}
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.content {
+    padding: 20px;
+}
+.content h1 {
+    background-color: rgba(226, 172, 72, 0.8);
+    padding: 10px;
+    color: #000;
+    margin: 0 -20px 20px -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 0;
+}
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(30% - 60px);
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.course-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.course-card .separator {
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+.course-card h2 {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+}
+.course-card p {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+}
+.course-card .status {
+    font-size: 10px;
+    color: #888;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .course-card {
+        width: 100%;
+    }
+}

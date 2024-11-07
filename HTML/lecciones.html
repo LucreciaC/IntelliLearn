@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi aprendizaje</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/CSS/lecciones.css" />
+</head>
+<body>
+    <div class="header">
+        <header class="header">
+            <div class="navbar">
+                <div class="menuIcon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="navbar-logo">
+                    <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a class="dropdown-toggle" href="#">
+                            Explorar cursos
+                            <span class="arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    Desarrollo
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                                  <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                                  <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Diseño
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                                  <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                                  <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Marketing
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                                  <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                                  <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Negocios
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                                  <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                                  <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-user-circle"></i>
+                   </div>
+            </div>
+            <div class="overlay" id="overlay" onclick="toggleMenu()">
+                <button class="close-btn" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="navbarMobile" id="navbarMobile">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <div class="separator"></div>
+                    <div class="explore-title">Explorar cursos</div>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('desarrollo')">Desarrollo<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('diseno')">Diseño<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('marketing')">Marketing<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('negocios')">Negocios<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <div class="separator"></div>
+                    <li><a href="/HTML/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="/HTML/IniciarSesion.html">Iniciar Sesión</a></li>
+                    <li><a href="/HTML/Registrarse.html">Registrarme</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="desarrollo" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                    <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                    <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="diseno" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                    <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                    <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="marketing" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                    <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                    <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="negocios" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                    <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                    <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+                </ul>
+            </div>
+            
+        </header>
+       <div class="breadcrumb">
+        <a href="#">
+         <i class="fas fa-home"></i>
+        </a>
+        &gt;
+        <a href="#">
+         Cuenta Personal
+        </a>
+        &gt;
+        <a href="#">
+         Mis lecciones
+        </a>
+       </div>
+       <div class="content">
+        <h1>
+         Mi aprendizaje
+        </h1>
+        <div class="courses">
+         <div class="course-card">
+          <img alt="Web Development 101" src="https://storage.googleapis.com/a1aa/image/o8Pv69pY1L6BEdUul6Cv0IF9ZWs4sdXnRWtJZ1UUHGELPq7E.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Web Development 101
+           </h2>
+           <p>
+            Learn HTML, CSS, and JavaScript
+           </p>
+           <p>
+            Start your journey in web development
+           </p>
+           <p class="status">
+            En curso
+           </p>
+          </div>
+         </div>
+         <div class="course-card">
+          <img alt="Digital Marketing Fundamentals" src="https://storage.googleapis.com/a1aa/image/aZtn7CGQ6BqVOFowWYnJJfebOeg2xFhG8rwQwMRySLQb5RdnA.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Digital Marketing Fundamentals
+           </h2>
+           <p>
+            Master online marketing tactics
+           </p>
+           <p>
+            Boost your digital presence
+           </p>
+          </div>
+         </div>
+         <div class="course-card">
+          <img alt="Data Science for Beginners" src="https://storage.googleapis.com/a1aa/image/aYZPeaybLtyKQaveCzIBOzDWvb5JdoXfKsVUniTpliOfyj6OB.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Data Science for Beginners
+           </h2>
+           <p>
+            Introduction to data analytics
+           </p>
+           <p>
+            Explore the world of data
+           </p>
+          </div>
+         </div>
+         <div class="course-card">
+          <img alt="Web Development 101" src="https://storage.googleapis.com/a1aa/image/o8Pv69pY1L6BEdUul6Cv0IF9ZWs4sdXnRWtJZ1UUHGELPq7E.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Web Development 101
+           </h2>
+           <p>
+            Learn HTML, CSS, and JavaScript
+           </p>
+           <p>
+            Start your journey in web development
+           </p>
+           <p class="status">
+            Registrado
+           </p>
+          </div>
+         </div>
+         <div class="course-card">
+          <img alt="Digital Marketing Fundamentals" src="https://storage.googleapis.com/a1aa/image/aZtn7CGQ6BqVOFowWYnJJfebOeg2xFhG8rwQwMRySLQb5RdnA.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Digital Marketing Fundamentals
+           </h2>
+           <p>
+            Master online marketing tactics
+           </p>
+           <p>
+            Boost your digital presence
+           </p>
+          </div>
+         </div>
+         <div class="course-card">
+          <img alt="Data Science for Beginners" src="https://storage.googleapis.com/a1aa/image/aYZPeaybLtyKQaveCzIBOzDWvb5JdoXfKsVUniTpliOfyj6OB.jpg"/>
+          <div class="separator"></div>
+          <div>
+           <h2>
+            Data Science for Beginners
+           </h2>
+           <p>
+            Introduction to data analytics
+           </p>
+           <p>
+            Explore the world of data
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+
+
+
+
+
+
+
+       <script>
+        const menuStructure = {
+            main: `
+                
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li class="separator"></li>
+                    <li><a href="#" class="bold">Explorar cursos</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('development')" class="with-arrow">Desarrollo <span class="arrow">→</span></a></li>
+                    <li><a href="#" onclick="toggleSubMenu('design')" class="with-arrow">Diseño <span class="arrow">→</span></a></li>
+                    <li><a href="#" onclick="toggleSubMenu('marketing')" class="with-arrow">Marketing <span class="arrow">→</span></a></li>
+                    <li><a href="#" onclick="toggleSubMenu('business')" class="with-arrow">Negocios <span class="arrow">→</span></a></li>
+                    <li class="separator"></li>
+                    <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
+                    <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
+                </ul>
+            `,
+            explore: `
+                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                <div class="explore-title">Explorar cursos</div>
+                <ul>
+                    <li><a href="#" onclick="toggleSubMenu('development')">Desarrollo</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('design')">Diseño</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('marketing')">Marketing</a></li>
+                    <li><a href="#" onclick="toggleSubMenu('business')">Negocios</a></li>
+                </ul>
+            `,
+            development: `
+                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                <div class="explore-title">Desarrollo</div>
+                <ul>
+                    <li><a href="/cursos/web">Desarrollo Web</a></li>
+                    <li><a href="/cursos/mobile">Desarrollo Móvil</a></li>
+                    <li><a href="/cursos/javascript">JavaScript</a></li>
+                </ul>
+            `,
+            design: `
+                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                <div class="explore-title">Diseño</div>
+                <ul>
+                    <li><a href="/cursos/ux-ui">UX/UI Design</a></li>
+                    <li><a href="/cursos/graphic-design">Diseño Gráfico</a></li>
+                </ul>
+            `,
+            marketing: `
+                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                <div class="explore-title">Marketing</div>
+                <ul>
+                    <li><a href="/cursos/digital-marketing">Marketing Digital</a></li>
+                    <li><a href="/cursos/social-media">Social Media</a></li>
+                </ul>
+            `,
+            business: `
+                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                <div class="explore-title">Negocios</div>
+                <ul>
+                    <li><a href="/cursos/entrepreneurship">Emprendimiento</a></li>
+                    <li><a href="/cursos/finance">Finanzas</a></li>
+                </ul>
+            `
+        };
+        
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.menuIcon');
+            const navbarMobile = document.querySelector('.navbarMobile');
+            const overlay = document.querySelector('.overlay');
+            
+            menuIcon.classList.toggle('active');
+            navbarMobile.classList.toggle('active');
+            overlay.classList.toggle('active');
+        
+            if (navbarMobile.classList.contains('active')) {
+                showMainMenu();
+            }
+        }
+        
+        function toggleSubMenu(menuType) {
+            const navbarMobile = document.querySelector('.navbarMobile');
+            navbarMobile.innerHTML = menuStructure[menuType] || menuStructure.main;
+        }
+        
+        function showMainMenu() {
+            toggleSubMenu('main');
+        }
+        
+        // Event listener para cerrar el menú al hacer clic en el overlay
+        document.querySelector('.overlay').addEventListener('click', toggleMenu);
+                </script>
+</body>
+</html>
