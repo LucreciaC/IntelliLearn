@@ -413,11 +413,212 @@
 }
 
 /* Resto de la pagina */
+/* FUNCIONALIDAD DE ICONOS */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+.sidebar.hidden {
+    transform: translateX(100%);
+}
+.sidebar .close-btn {
+    align-self: flex-end;
+    font-size: 20px;
+    cursor: pointer;
+}
+.sidebar .contacts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar .contacts-header h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 50px;
+}
+.sidebar .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar .search-bar input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sidebar .search-bar .search-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #666;
+}
+.sidebar .contact-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.sidebar .contact-list .contact-group {
+    margin-bottom: 20px;
+}
+.sidebar .contact-list .contact-group h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.sidebar .contact-list .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.sidebar .contact-list .contact-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sidebar .contact-list .contact-item .contact-name {
+    font-size: 14px;
+}
+.privacy-settings, .chat-settings {
+    display: none;
+    flex-direction: column;
+}
+.privacy-settings h2, .chat-settings h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.privacy-settings p, .chat-settings p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.estadoConexion{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.profilePic{
+    border-radius: 50%;
+}
+
+.privacy-settings .option, .chat-settings .option {
+    margin-bottom: 10px;
+}
+.back-btn {
+    background-color: #ff3366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.back-btn:hover {
+    background-color: #e62e5c;
+}
+.back-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+.back-arrow-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.back-arrow-container h2 {
+    margin-left: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.chat-window {
+    display: none;
+    flex-direction: column;
+}
+
+ .chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+ .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+ .chat-input .send-btn {
+    margin-left: 10px;
+    padding: 10px 10px;
+    background-color: #ff3366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ .chat-input .send-btn:hover {
+    background-color: #e62e5c;
+}
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.chat-settings {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative; /* Necesario para posicionar el menú */
+}
+
+.chat-options {
+    cursor: pointer;
+}
+#chat-options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
 
 
+#chat-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#chat-options li {
+    padding: 10px;
+    cursor: pointer;
+}
+#chat-options li:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
 
-
-
+/*RESTO DE LA PAGINA*/
 
 
 
@@ -491,6 +692,7 @@
     color: #888;
     margin-top: 10px;
 }
+
 @media (max-width: 768px) {
     .course-card {
         width: 100%;

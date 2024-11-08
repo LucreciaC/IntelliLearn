@@ -85,7 +85,7 @@
                     </li>
                 </ul>
                 <div class="icons">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope" onclick="toggleSidebar()"></i>
                     <i class="fas fa-cog"></i>
                     <i class="fas fa-user-circle"></i>
                    </div>
@@ -143,7 +143,7 @@
             
         </header>
        <div class="breadcrumb">
-        <a href="#">
+        <a href="/Index.html">
          <i class="fas fa-home"></i>
         </a>
         &gt;
@@ -259,100 +259,117 @@
         </div>
        </div>
 
-
-
-
-
-
-
-       <script>
-        const menuStructure = {
-            main: `
-                
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li class="separator"></li>
-                    <li><a href="#" class="bold">Explorar cursos</a></li>
-                    <li><a href="#" onclick="toggleSubMenu('development')" class="with-arrow">Desarrollo <span class="arrow">→</span></a></li>
-                    <li><a href="#" onclick="toggleSubMenu('design')" class="with-arrow">Diseño <span class="arrow">→</span></a></li>
-                    <li><a href="#" onclick="toggleSubMenu('marketing')" class="with-arrow">Marketing <span class="arrow">→</span></a></li>
-                    <li><a href="#" onclick="toggleSubMenu('business')" class="with-arrow">Negocios <span class="arrow">→</span></a></li>
-                    <li class="separator"></li>
-                    <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
-                    <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
-                    <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
-                </ul>
-            `,
-            explore: `
-                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
-                <div class="explore-title">Explorar cursos</div>
-                <ul>
-                    <li><a href="#" onclick="toggleSubMenu('development')">Desarrollo</a></li>
-                    <li><a href="#" onclick="toggleSubMenu('design')">Diseño</a></li>
-                    <li><a href="#" onclick="toggleSubMenu('marketing')">Marketing</a></li>
-                    <li><a href="#" onclick="toggleSubMenu('business')">Negocios</a></li>
-                </ul>
-            `,
-            development: `
-                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
-                <div class="explore-title">Desarrollo</div>
-                <ul>
-                    <li><a href="/cursos/web">Desarrollo Web</a></li>
-                    <li><a href="/cursos/mobile">Desarrollo Móvil</a></li>
-                    <li><a href="/cursos/javascript">JavaScript</a></li>
-                </ul>
-            `,
-            design: `
-                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
-                <div class="explore-title">Diseño</div>
-                <ul>
-                    <li><a href="/cursos/ux-ui">UX/UI Design</a></li>
-                    <li><a href="/cursos/graphic-design">Diseño Gráfico</a></li>
-                </ul>
-            `,
-            marketing: `
-                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
-                <div class="explore-title">Marketing</div>
-                <ul>
-                    <li><a href="/cursos/digital-marketing">Marketing Digital</a></li>
-                    <li><a href="/cursos/social-media">Social Media</a></li>
-                </ul>
-            `,
-            business: `
-                <button class="back-btn" onclick="showMainMenu()">← Volver</button>
-                <div class="explore-title">Negocios</div>
-                <ul>
-                    <li><a href="/cursos/entrepreneurship">Emprendimiento</a></li>
-                    <li><a href="/cursos/finance">Finanzas</a></li>
-                </ul>
-            `
-        };
-        
-        function toggleMenu() {
-            const menuIcon = document.querySelector('.menuIcon');
-            const navbarMobile = document.querySelector('.navbarMobile');
-            const overlay = document.querySelector('.overlay');
-            
-            menuIcon.classList.toggle('active');
-            navbarMobile.classList.toggle('active');
-            overlay.classList.toggle('active');
-        
-            if (navbarMobile.classList.contains('active')) {
-                showMainMenu();
-            }
-        }
-        
-        function toggleSubMenu(menuType) {
-            const navbarMobile = document.querySelector('.navbarMobile');
-            navbarMobile.innerHTML = menuStructure[menuType] || menuStructure.main;
-        }
-        
-        function showMainMenu() {
-            toggleSubMenu('main');
-        }
-        
-        // Event listener para cerrar el menú al hacer clic en el overlay
-        document.querySelector('.overlay').addEventListener('click', toggleMenu);
-                </script>
+       <div class="sidebar hidden" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+         ×
+        </div>
+        <div class="contacts-header">
+         <h2>
+          Contactos
+         </h2>
+         <i class="fas fa-cog icon" id="settings-icon" onclick="toggleMessageSettings()">
+         </i>
+        </div>
+        <div class="search-bar" id="search-bar">
+         <input placeholder="Búsqueda" type="text"/>
+         <i class="fas fa-search search-icon">
+         </i>
+        </div>
+        <div class="contact-list" id="contact-list">
+         <div class="contact-group">
+          <h3>
+           Destacados (1)
+          </h3>
+          <div class="contact-item" onclick="openChat()">
+           <img  alt="Profile picture of Lucrecia Concatti" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg" width="40"/>
+           <div class="contact-name">
+            Lucrecia Concatti
+           </div>
+          </div>
+         </div>
+         <div class="contact-group">
+          <h3>
+           Grupo (0)
+          </h3>
+         </div>
+         <div class="contact-group">
+          <h3>
+           Privado (0)
+          </h3>
+         </div>
+        </div>
+        <div class="privacy-settings" id="privacy-settings">
+         <div class="back-arrow-container">
+          <i class="fas fa-arrow-left back-arrow" onclick="toggleMessageSettings()">
+          </i>
+          <h2>
+           Configuración
+          </h2>
+         </div>
+         <h2>
+          Privacidad
+         </h2>
+         <p>
+          Puedes restringir quién puede enviarte mensajes:
+         </p>
+         <div class="option">
+          <input id="everyone" name="privacy" type="radio" value="everyone"/>
+          <label for="everyone">
+           Todos
+          </label>
+         </div>
+         <div class="option">
+          <input id="contacts" name="privacy" type="radio" value="contacts"/>
+          <label for="contacts">
+           Solo contactos
+          </label>
+         </div>
+         <div class="option">
+          <input id="noone" name="privacy" type="radio" value="noone"/>
+          <label for="noone">
+           Nadie
+          </label>
+         </div>
+        </div>
+        <div class="chat-settings" id="chat-settings">
+         <div class="back-arrow-container">
+          <div style="display: flex; align-items: center;">
+           <i class="fas fa-arrow-left back-arrow" onclick="toggleChatSettings()">
+           </i>
+           <img class="profilePic" alt="Profile picture of Lucrecia Concatti" class="chat-profile-pic" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg" width="40"/>
+           <div class="chat-name">
+            <h2>
+             Lucrecia Concatti
+            </h2>
+            <p class="estadoConexion">
+             En línea
+            </p>
+           </div>
+          </div>
+          <div class="chat-options-icon" onclick="showChatOptions(event)">
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+         </div>
+         <div class="separator">
+         </div>
+         <div class="chat-messages" id="chat-messages">
+          <!-- Chat messages will go here -->
+         </div>
+         <div class="chat-input">
+          <input placeholder="Escribe un mensaje..." type="text"/>
+          <button class="send-btn">
+           Enviar
+          </button>
+         </div>
+        </div>
+        <div class="chat-options" id="chat-options" >
+            <ul>
+                <li onclick="deleteConversation()">Eliminar conversación</li>
+                <li onclick="toggleChatSettings()">Configuración</li>
+            </ul>
+        </div>
+       </div>
+       <script src="/JS/hamburger-menu.js"></script>
+       <script src="/JS/sidebar.js"></script>
 </body>
 </html>
