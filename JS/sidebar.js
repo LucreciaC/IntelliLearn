@@ -107,3 +107,23 @@ document.addEventListener('click', function(event) {
         chatOptions.style.display = 'none'; // Cierra el menú si se hace clic fuera
     }
 });
+
+
+//Settings 
+function toggleSettingsDropdown() {
+    var settingsDropdown = document.getElementById("settings-dropdown");
+    if (settingsDropdown.style.display === "block") {
+        settingsDropdown.style.display = "none";
+    } else {
+        settingsDropdown.style.display = "block";
+    }
+}
+
+window.onclick = function(event) {
+    var settingsDropdown = document.getElementById("settings-dropdown");
+    if (!event.target.matches('.fa-cog')) {
+        if (settingsDropdown.style.display === "block") {
+            settingsDropdown.style.display = "none";
+        }
+    }
+}

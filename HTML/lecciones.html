@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="/CSS/lecciones.css" />
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="header">
@@ -86,10 +87,17 @@
                 </ul>
                 <div class="icons">
                     <i class="fas fa-envelope" onclick="toggleSidebar()"></i>
-                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-cog" onclick="toggleSettingsDropdown()"></i>
                     <i class="fas fa-user-circle"></i>
                    </div>
             </div>
+
+            <div class="settings-dropdown" id="settings-dropdown">
+                <a href="#">Cambio de contraseña</a>
+                <a href="#">Eliminar o desactivar la cuenta</a>
+                <a href="#">Ayuda</a>
+            </div>
+
             <div class="overlay" id="overlay" onclick="toggleMenu()">
                 <button class="close-btn" onclick="toggleMenu()">&times;</button>
             </div>
