@@ -88,15 +88,35 @@
                 <div class="icons">
                     <i class="fas fa-envelope" onclick="toggleSidebar()"></i>
                     <i class="fas fa-cog" onclick="toggleSettingsDropdown()"></i>
-                    <i class="fas fa-user-circle"></i>
-                   </div>
-            </div>
+                    
+                    <div class="user-menu">
+                        <i class="fas fa-user-circle" onclick="toggleDropdown()"></i>
+                        <div class="dropdown" id="userDropdown">
+                            <a href="#">
+                                <div class="user-info">
+                                    <img alt="User  Avatar" src="https://storage.googleapis.com/a1aa/image/aGdxFrvDw75dM9vg1X3pPs8Cz4UULEBUagpCGyZnooxWAw7E.jpg"/>
+                                    <p class="userName">Nombre Completo</p>
+                                </div>
+                            </a>
+                            <a class="profiles-link" href="#">
+                                Ver perfil
+                            </a>
+                            <div class="separator"></div>
+                            <a href="#">
+                                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
 
             <div class="settings-dropdown" id="settings-dropdown">
                 <a href="#">Cambio de contraseña</a>
                 <a href="#">Eliminar o desactivar la cuenta</a>
                 <a href="#">Ayuda</a>
             </div>
+
+            
+
+
 
             <div class="overlay" id="overlay" onclick="toggleMenu()">
                 <button class="close-btn" onclick="toggleMenu()">&times;</button>

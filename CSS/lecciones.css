@@ -641,8 +641,71 @@
 }
 
 
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
 
+.user-menu img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre la imagen y el nombre */
+    vertical-align: middle; /* Alineación vertical */
+}
 
+.user-menu .dropdown {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    right: -19px;
+    background-color: #FFEAB6;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 60px;
+}
+
+.user-menu .dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-info {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+.user-info .userName {
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.profiles-link {
+    text-align: center;
+    margin-top: -20px;
+    color: blue;
+    transition: text-decoration 0.3s ease; /* Transición suave para el efecto */
+}
+
+ /* Asegúrate de que el color azul se aplique a profiles-link */
+ .user-menu .dropdown .profiles-link {
+    color: #1D4ED8; /* Asegúrate de que el color azul se aplique */
+}
+
+.profiles-link:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.user-menu .dropdown a:hover {
+    background-color: #ddd;
+}
+
+.user-menu .dropdown .separator {
+    border-top: 1px solid #000;
+    margin: 10px 0;
+}
 
 /*RESTO DE LA PAGINA*/
 
