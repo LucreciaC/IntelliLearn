@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/temas.css">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Programa</title>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="sidebar">
+        <h2>IntelliLearn</h2>
+        <hr>
+        <a href="#"><i class="fas fa-comments"></i>Chat</a>
+        <a href="#"><i class="fas fa-download"></i>Certificado</a>
+        <a href="#"><i class="fas fa-bell"></i>Notificaciones</a>
+        <hr>
+        <a href="#"><i class="fas fa-calendar-alt"></i>Eventos</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Web Development 101</h1>
+            <div class="navbar">
+                <div class="icons">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>Programa</h2>
+            <div class="course-material">
+                <button><i class="fas fa-folder"></i>Material del Curso</button>
+            </div>
+            <div class="program">
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>Introducción al Desarrollo Web + Onboarding</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>1. Prototipado y conceptos básicos de HTML</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>2. Primeros pasos con HTML</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>3. Incluyendo CSS a nuestro proyecto</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>After repaso</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>4. CSS+Box Modeling</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>5. Flexbox</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-play-circle"></i>Grabación</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="status">
+                        <i class="fas fa-check-circle icon"></i>
+                    </div>
+                    <h3>Primera pre-entrega de tu Proyecto Final</h3>
+                    <div class="details">
+                        <button onclick="changeIconColor(this)"><i class="fas fa-info-circle"></i>Ver detalles</button>
+                        <button><i class="fas fa-folder"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        }
+        function changeIconColor(button) {
+            const statusIcon = button.closest('.program-item').querySelector('.status .icon');
+            statusIcon.style.color = 'green';
+        }
+    </script>
+</body>
+</html>
