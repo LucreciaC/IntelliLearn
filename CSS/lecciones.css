@@ -754,6 +754,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: block; /* Asegura que el enlace ocupe todo el espacio */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
 }
 .course-card img {
     width: 100%;
