@@ -18,7 +18,7 @@
         <div class="sidebar">
             <h2>IntelliLearn</h2>
             <hr>
-            <a href="#"><i class="fas fa-comments"></i>Chat</a>
+            <a href="#"><i class="fas fa-comments" onclick="toggleChatSidebar()"></i>Chat</a>
             <a href="#"><i class="fas fa-download"></i>Certificado</a>
             <a href="#"><i class="fas fa-bell"></i>Notificaciones</a>
             <hr>
@@ -137,6 +137,83 @@
                 </div>
             </div>
         </div>
+
+
+ <!-- Chat Sidebar -->
+ <div class="chat-sidebar" id="chatSidebar">
+    <div class="contacts-header">
+        <h2>Contactos</h2>
+        <i class="fas fa-cog icon" id="settings-icon" onclick="toggleMessageSettings()"></i>
+    </div>
+    <div class="search-bar" id="search-bar">
+        <input placeholder="Búsqueda" type="text"/>
+        <i class="fas fa-search search-icon"></i>
+    </div>
+    <div class="contact-list" id="contact-list">
+        <div class="contact-group">
+            <h3>Destacados (1)</h3>
+            <div class="contact-item" onclick="openChat()">
+                <img alt="Profile picture of Lucrecia Concatti" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg" width="40"/>
+                <div class="contact-name">Lucrecia Concatti</div>
+            </div>
+        </div>
+        <div class="contact-group">
+            <h3>Grupo (0)</h3>
+        </div>
+        <div class="contact-group">
+            <h3>Privado (0)</h3>
+        </div>
+    </div>
+    <div class="privacy-settings" id="privacy-settings">
+        <div class="back-arrow-container">
+            <i class="fas fa-arrow-left back-arrow" onclick="toggleMessageSettings()"></i>
+            <h2>Configuración</h2>
+        </div>
+        <h2>Privacidad</h2>
+        <p>Puedes restringir quién puede enviarte mensajes:</p>
+        <div class="option">
+            <input id="everyone" name="privacy" type="radio" value="everyone"/>
+            <label for="everyone">Todos</label>
+        </div>
+        <div class="option">
+            <input id="contacts" name="privacy" type="radio" value="contacts"/>
+            <label for="contacts">Solo contactos</label>
+        </div>
+        <div class="option">
+            <input id="noone" name="privacy" type="radio" value="noone"/>
+            <label for="noone">Nadie</label>
+        </div>
+    </div>
+    <div class="chat-settings" id="chat-settings">
+        <div class="back-arrow-container">
+            <div style="display: flex; align-items: center;">
+                <i class="fas fa-arrow-left back-arrow" onclick="toggleChatSettings()"></i>
+                <img class="profilePic" alt="Profile picture of Lucrecia Concatti" class="chat-profile-pic" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg " width="40"/>
+                <div class="chat-name">
+                    <h2>Lucrecia Concatti</h2>
+                    <p class="estadoConexion">En línea</p>
+                </div>
+            </div>
+            <div class="chat-options-icon" onclick="showChatOptions(event)">
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will go here -->
+        </div>
+        <div class="chat-input">
+            <input placeholder="Escribe un mensaje..." type="text"/>
+            <button class="send-btn">Enviar</button>
+        </div>
+    </div>
+    <div class="chat-options" id="chat-options">
+        <ul>
+            <li onclick="deleteConversation()">Eliminar conversación</li>
+            <li onclick="toggleChatSettings()">Configuración</li>
+        </ul>
+    </div>
+</div>
     <script>
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('active');
@@ -166,5 +243,51 @@
         });
     </script>
 
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+        document.querySelector('.hamburger').classList.toggle('active');
+    }
+
+    function toggleChatSidebar() {
+        const chatSidebar = document.getElementById('chatSidebar');
+        chatSidebar.classList.toggle('active');
+    }
+
+    function toggleMessageSettings() {
+        const privacySettings = document.getElementById('privacy-settings');
+        privacySettings.style.display = privacySettings.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleChatSettings() {
+        const chatSettings = document.getElementById('chat-settings');
+        chatSettings.style.display = chatSettings.style.display === "block" ? "none" : "block";
+    }
+
+    function openChat() {
+        // Logic to open chat with the selected contact
+    }
+
+    function showChatOptions(event) {
+        const chatOptions = document.getElementById('chat-options');
+        chatOptions.style.display = chatOptions.style.display === "block" ? "none" : "block";
+        event.stopPropagation(); // Prevent event bubbling
+    }
+
+    function deleteConversation() {
+        // Logic to delete the conversation
+    }
+
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById("userDropdown");
+        const chatOptions = document.getElementById('chat-options');
+        if (!event.target.closest('.user-menu')) {
+            dropdown.style.display = "none";
+        }
+        if (!event.target.closest('#chat-options')) {
+            chatOptions.style.display = "none";
+        }
+    });
+</script>
 </body>
 </html>
