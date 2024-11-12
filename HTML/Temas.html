@@ -19,8 +19,16 @@
             <h2>IntelliLearn</h2>
             <hr>
             <a href="#"><i class="fas fa-comments" onclick="toggleSidebar()"></i>Chat</a>
-            <a href="#"><i class="fas fa-download"></i>Certificado</a>
-            <a href="#"><i class="fas fa-bell"></i>Notificaciones</a>
+            <a href="/ASSETS/PDF/Certificado de Reconocimiento.pdf"><i class="fas fa-download"></i>Certificado</a>
+            <a href="#" onclick="toggleNotifications()"><i class="fas fa-bell"></i>Notificaciones</a>
+<div id="notifications" class="notifications hidden">
+    <h3>Notificaciones</h3>
+    <ul>
+        <li>Notificación 1: Has completado una lección.</li>
+        <li>Notificación 2: Tienes un nuevo mensaje.</li>
+        <li>Notificación 3: Tu certificado está disponible para descarga.</li>
+    </ul>
+</div>
             <hr>
             <a href="#"><i class="fas fa-calendar-alt"></i>Eventos</a>
         </div>
@@ -280,6 +288,26 @@
                 dropdown.style.display = "none";
             }
         });
+    </script>
+
+    <script>
+        function toggleNotifications() {
+    var notifications = document.getElementById("notifications");
+    if (notifications.style.display === "block") {
+        notifications.style.display = "none";
+    } else {
+        notifications.style.display = "block";
+    }
+}
+
+// Cierra las notificaciones si se hace clic fuera de ellas
+document.addEventListener('click', function(event) {
+    var isClickInside = document.getElementById("notifications").contains(event.target) ||
+                        document.querySelector('.fa-bell').contains(event.target);
+    if (!isClickInside) {
+        document.getElementById("notifications").style.display = "none";
+    }
+});
     </script>
 
 <script src="/JS/sidebar.js"></script>
