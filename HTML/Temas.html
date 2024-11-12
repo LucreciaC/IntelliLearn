@@ -16,7 +16,7 @@
             <span></span>
         </div>
         <div class="sidebar1">
-            <h2>IntelliLearn</h2>
+            <a href="/Index.html"><h2>IntelliLearn</h2></a>
             <hr>
             <a href="#"><i class="fas fa-comments" onclick="toggleSidebar()"></i>Chat</a>
             <a href="/ASSETS/PDF/Certificado de Reconocimiento.pdf"><i class="fas fa-download"></i>Certificado</a>
@@ -59,7 +59,7 @@
             <div class="main-content">
                 <h2>Programa</h2>
                 <div class="course-material">
-                    <button><i class="fas fa-folder"></i>Material del Curso</button>
+                    <a href="https://drive.google.com/drive/folders/1OdE75aQHdWUp60peJuRG6mcOkus5i0qp"><button><i class="fas fa-folder"></i>Material del Curso</button></a>
                 </div>
                 <div class="program">
                     <div class="program-item">
@@ -138,7 +138,7 @@
                         </div>
                         <h3>Primera pre-entrega de tu Proyecto Final</h3>
                         <div class="details">
-                            <button onclick="changeIconColor(this)"><i class="fas fa-info-circle"></i>Ver detalles</button>
+                            <button onclick="showDetails()"><i class="fas fa-info-circle"></i>Ver detalles</button>
                             <button><i class="fas fa-folder"></i></button>
                         </div>
                     </div>
@@ -257,6 +257,62 @@
                 </ul>
             </div>
            </div>
+
+           <div class="modal hidden" id="content">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeContent()">&times;</span>
+                <h2>Primera pre-entrega de tu Proyecto Final</h2>
+                <h3>Clase: Flexbox</h3>
+                <div class="main-content">
+                    <div class="left">
+                        <div class="upload-section">
+                            <label for="file-upload">Subir archivo</label>
+                            <input id="file-upload" type="file"/>
+                            <p>Ningún archivo seleccionado</p>
+                        </div>
+                        <div class="message">
+                            <p><strong>Tutor Corrector</strong></p>
+                            <p>La entrega obtiene una calificación de: Óptimo.</p>
+                            <p>02/09/2022 18:30</p>
+                        </div>
+                        <div class="message">
+                            <div class="actions">
+                                <div>
+                                    <i class="fas fa-bold"></i>
+                                    <i class="fas fa-italic"></i>
+                                    <i class="fas fa-underline"></i>
+                                    <i class="fas fa-list-ul"></i>
+                                    <i class="fas fa-list-ol"></i>
+                                    <i class="fas fa-link"></i>
+                                    <i class="fas fa-image"></i>
+                                </div>
+                            </div>
+                            <textarea placeholder="Escribir un comentario sobre su entrega"></textarea>
+                            <button>Enviar mensaje</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="progress-item">
+                            <p><strong>Progreso</strong></p>
+                            <p>Habilidades</p>
+                            <p>24/08/2022 22:00</p>
+                        </div>
+                        <div class="progress-item">
+                            <p>Entrega realizada</p>
+                            <p>01/09/2022 12:26</p>
+                        </div>
+                        <div class="progress-item">
+                            <p>Recibiste una devolución</p>
+                            <p>01/09/2022 20:28</p>
+                        </div>
+                        <div class="progress-item">
+                            <p>Calificación: Óptimo (+6pts)</p>
+                            <p>02/09/2022 18:30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <script>
         function toggleSidebar() {
             document.querySelector('.sidebar').classList.toggle('active');
@@ -311,5 +367,17 @@ document.addEventListener('click', function(event) {
     </script>
 
 <script src="/JS/sidebar.js"></script>
+
+<script>
+
+function showDetails() {
+    document.getElementById('content').style.display = 'block'; // Show the content
+}
+
+function closeContent() {
+    document.getElementById('content').style.display = 'none'; // Hide the content
+}
+
+</script>
 </body>
 </html>
