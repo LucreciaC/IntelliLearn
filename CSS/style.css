@@ -41,7 +41,7 @@ body:has(.intro) .home-content {
 }
 .navbar {
     height: 100px;
-    background-color: #ffeab6;
+    background-color: rgba(255, 106, 59, 1);
     display: flex;
     align-items: center; /* Centramos verticalmente los elementos */
     justify-content: center; /* Centramos horizontalmente el contenido */
