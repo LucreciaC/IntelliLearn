@@ -33,50 +33,57 @@
             <!-- Content -->
             <div class="p-4">
                 <div class="flex items-center mb-4">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center">
+                    <button id="createButton" class="bg-blue-500 text-white px-4 py-2 rounded flex items-center mt-12">
                         Crear
                         <i class="fas fa-caret-down ml-2"></i>
                     </button>
+                    
+                
                     <button class="bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded ml-2">+ Carpeta</button>
                 </div>
                 
                 <!-- Dropdown Menu -->
-                <div class="bg-white border rounded shadow-lg w-64">
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-book text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Lección</div>
-                            <div class="text-sm text-gray-500">Crea contenido, multimedia y actividades</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-video text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Video</div>
-                            <div class="text-sm text-gray-500">Combina video y preguntas</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-tasks text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Actividad</div>
-                            <div class="text-sm text-gray-500">Interactúe rápidamente con una actividad</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-file-powerpoint text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Presentaciones de Google</div>
-                            <div class="text-sm text-gray-500">Crea lecciones en Google Slides</div>
-                        </div>
-                    </div>
-                </div>
-                
+<div id="dropdownMenu" class="bg-white border rounded shadow-lg w-64 hidden">
+    <div class="p-2 flex items-center">
+        <i class="fas fa-book text-blue-500 mr-2"></i>
+        <div>
+            <div class="font-bold"><a href="/HTML/opcionLeccion.html">Lección</a></div>
+            <div class="text-sm text-gray-500">Crea contenido, multimedia y actividades</div>
+        </div>
+    </div>
+    <div class="p-2 flex items-center video-option">
+        <i class="fas fa-video text-blue-500 mr-2"></i>
+        <div>
+            <div class="font-bold">Video</div>
+            <div class="text-sm text-gray-500">Combina video y preguntas</div>
+        </div>
+    </div>
+    <div class="p-2 flex items-center">
+        <i class="fas fa-tasks text-blue-500 mr-2"></i>
+        <div>
+            <div class="font-bold">Actividad</div>
+            <div class="text-sm text-gray-500">Interactúe rápidamente con una actividad</div>
+        </div>
+    </div>
+    <div class="p-2 flex items-center">
+        <i class="fas fa-file-powerpoint text-blue-500 mr-2"></i>
+        <div>
+            <div class="font-bold">Presentaciones de Google</div>
+            <div class="text-sm text-gray-500">Crea lecciones en Google Slides</div>
+        </div>
+    </div>
+</div>
+
+<!-- Input de archivo oculto -->
+<input type="file" id="videoUpload" accept="video/*" class="hidden" />
+
+<script src="/JS/subirContenido.js"></script>
+
                 <!-- Main Section -->
                 <div class="mt-8">
                     <div class="border-2 border-dashed border-gray-300 p-8 text-center">
-                        <div class="text-blue-500 text-4xl">+</div>
-                        <div class="text-blue-500 text-xl">Crea una Lección</div>
+                        <div class="text-blue-500 text-4xl"><a href="/HTML/opcionLeccion.html">+</a></div>
+                        <div class="text-blue-500 text-xl"><a href="/HTML/opcionLeccion.html">Crea una Lección</a></div>
                     </div>
                 </div>
             </div>
