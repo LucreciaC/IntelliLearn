@@ -1,0 +1,14 @@
+/* Logo */
+.navbar-logo {
+    position: absolute;
+    left: 345px; /* Mueve el logo 10px hacia la izquierda */
+    display: flex;
+    align-items: center; /* Alinea el logo verticalmente también */
+}
+
+.navbar-logo .logo {
+    width: 249px;
+    height: 137px;
+    object-fit: cover;
+}
+
