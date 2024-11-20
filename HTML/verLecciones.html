@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/verLecciones.css">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Lecciones</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+         <i class="fas fa-graduation-cap">
+         </i>
+         <span>
+          IntelliLearn
+         </span>
+        </div>
+        <div class="course-title">
+         Web Development 101
+        </div>
+        <div class="progress">
+         <i class="fas fa-user-graduate">
+         </i>
+         <span onclick="toggleProgressPopup()">
+          Tu progreso
+          <i class="fas fa-chevron-down" style="font-size: 12px;"></i>
+         </span>
+         <div class="progress-popup" id="progress-popup">
+          <p>1 de 6 completado</p>
+          <p>Termina el curso para obtener el certificado</p>
+         </div>
+        </div>
+       </div>
+       <div class="video-section">
+        <video controls style="width: 100%; max-width: 800px; height: auto;">
+         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+        </video>
+       </div>
+       <div class="tabs">
+        <button class="tab-button active" id="general-description-button" onclick="showTab('general-description')">
+         Descripción general
+        </button>
+        <button class="tab-button" id="qa-button" onclick="showTab('qa')">
+         Preguntas y respuestas
+        </button>
+       </div>
+       <div class="content">
+        <div class="tab-content" id="general-description">
+         <p>
+          Cómo dominar el desarrollo web: una descripción general completa de CSS, Bootstrap, JavaScript para principiantes
+         </p>
+         <div class="details">
+          <div class="stats">
+           <div>
+            <i class="fas fa-star">
+            </i>
+            <span>
+             4.4
+             <small>
+              (405 valoraciones)
+             </small>
+            </span>
+           </div>
+           <div>
+            <i class="fas fa-users">
+            </i>
+            <span>
+             34,583
+             <small>
+              Estudiantes
+             </small>
+            </span>
+           </div>
+           <div>
+            <i class="fas fa-clock">
+            </i>
+            <span>
+             18 horas
+            </span>
+           </div>
+          </div>
+          <button class="next-button">
+           Siguiente vídeo
+          </button>
+         </div>
+        </div>
+        <div class="tab-content qa-section" id="qa">
+         <h2>Preguntas y respuestas</h2>
+         <p>Deja tus preguntas y revisa las respuestas de otros estudiantes.</p>
+         <textarea placeholder="Escribe tu pregunta aquí..." rows="4" style="width: 100%; border-radius: 5px; border: 1px solid #ccc; padding: 10px;"></textarea>
+         <button style="margin-top: 10px; background-color: #A7C5C5; border: none; padding: 10px 20px; cursor: pointer; font-size: 14px; color: #000; border-radius: 5px;">Enviar pregunta</button>
+         <div style="margin-top: 20px;">
+          <h3>Respuestas:</h3>
+          <div class="qa-item">
+           <p class="question"><strong>Estudiante 1:</strong> ¿Cómo puedo centrar un div en CSS?</p>
+           <p class="answer"><strong>Respuesta:</strong> Puedes centrar un div usando flexbox o margin auto. Por ejemplo: <code>display: flex; justify-content: center; align-items: center;</code> o <code>margin: auto;</code>.</p>
+           <button class="reply-button" onclick="toggleReplyForm('reply-form-1')">Responder</button>
+           <div class="reply-form" id="reply-form-1">
+            <textarea placeholder="Escribe tu respuesta aquí..." rows="2" style="width: 100%; border-radius: 5px; border: 1px solid #ccc; padding: 10px;"></textarea>
+            <button style="margin-top: 10px; background-color: #A7C5C5; border: none; padding: 10px 20px; cursor: pointer; font-size: 14px; color: #000; border-radius: 5px;">Enviar respuesta</button>
+           </div>
+          </div>
+          <div class="qa-item">
+           <p class="question"><strong>Estudiante 2:</strong> ¿Cuál es la diferencia entre let y var en JavaScript?</p>
+           <p class="answer"><strong>Respuesta:</strong> <code>let</code> tiene un alcance de bloque y <code>var</code> tiene un alcance de función. Además, <code>let</code> no permite redeclaraciones dentro del mismo ámbito.</p>
+           <button class="reply-button" onclick="toggleReplyForm('reply-form-2')">Responder</button>
+           <div class="reply-form" id="reply-form-2">
+            <textarea placeholder="Escribe tu respuesta aquí..." rows="2" style="width: 100%; border-radius: 5px; border: 1px solid #ccc; padding: 10px;"></textarea>
+            <button style="margin-top: 10px; background-color: #A7C5C5; border: none; padding: 10px 20px; cursor: pointer; font-size: 14px; color: #000; border-radius: 5px;">Enviar respuesta</button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <script>
+        function toggleProgressPopup() {
+                 var popup = document.getElementById('progress-popup');
+                 if (popup.style.display === 'none' || popup.style.display === '') {
+                     popup.style.display = 'block';
+                 } else {
+                     popup.style.display = 'none';
+                 }
+             }
+     
+             function showTab(tabName) {
+                 var tabs = document.getElementsByClassName('tab-content');
+                 for (var i = 0; i < tabs.length; i++) {
+                     tabs[i].style.display = 'none';
+                 }
+                 document.getElementById(tabName).style.display = 'block';
+     
+                 var tabButtons = document.getElementsByClassName('tab-button');
+                 for (var i = 0; i < tabButtons.length; i++) {
+                     tabButtons[i].classList.remove('active');
+                 }
+                 document.getElementById(tabName + '-button').classList.add('active');
+             }
+     
+             function toggleReplyForm(id) {
+                 var form = document.getElementById(id);
+                 if (form.style.display === 'none' || form.style.display === '') {
+                     form.style.display = 'block';
+                 } else {
+                     form.style.display = 'none';
+                 }
+             }
+       </script>
+</body>
+</html>

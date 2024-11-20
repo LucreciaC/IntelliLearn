@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/cuenta.css">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mi cuenta</title>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar-logo">
+            <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+        </div>
+        <div class="user-menu">
+            <i class="fas fa-user-circle" id="icon" onclick="toggleDropdown()"></i>
+            <div class="dropdown" id="userDropdown">
+                <a href="#">
+                    <div class="user-info">
+                        <img alt="User  Avatar" src="https://storage.googleapis.com/a1aa/image/aGdxFrvDw75dM9vg1X3pPs8Cz4UULEBUagpCGyZnooxWAw7E.jpg"/>
+                        <p class="userName">Nombre Completo</p>
+                    </div>
+                </a>
+                <a class="profiles-link" href="#">
+                    Ver perfil
+                </a>
+                <div class="separator"></div>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </a>
+            </div>
+        </div>
+       </div>
+       <div class="content">
+        <div class="profile-card">
+         <h2>
+          Editar perfil
+         </h2>
+         <img alt="Profile picture" class="profile-pic" height="100" src="https://storage.googleapis.com/a1aa/image/D2dL0nRKvA4cJFvNX3eUIO2G0epYQaZm20B35UeVcnc42efdC.jpg" width="100"/>
+         <div class="edit-link">
+          Editar
+         </div>
+         <div class="section-title">
+          Foto de portada
+          <span class="add-link">
+           Añadir
+          </span>
+          <img alt="Portada picture" class="portada" height="100" src="https://plus.unsplash.com/premium_photo-1664112065830-5819554d0ec2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydGFkYSUyMGRlJTIwbGlua2VkaW58ZW58MHx8MHx8fDA%3D" width="100"/>
+         </div>
+         <div class="section-title">
+            Datos personales
+            <span class="add-link">
+             Añadir
+            </span>
+           </div>
+           <div class="description">
+            <textarea placeholder="Descríbete..." rows="3"></textarea>
+           </div>
+         <div class="section-title">
+          Personaliza tus detalles
+          <span class="add-link">
+           Añadir
+          </span>
+         </div>
+         <ul class="details-list">
+          <li>
+           <i class="fas fa-map-marker-alt">
+           </i>
+           <span>
+            Ciudad actual
+           </span>
+          </li>
+          <li>
+           <i class="fas fa-briefcase">
+           </i>
+           <span>
+            Lugar de trabajo
+           </span>
+          </li>
+          <li>
+           <i class="fas fa-school">
+           </i>
+           <span>
+            Centro educativo
+           </span>
+          </li>
+          <li>
+           <i class="fas fa-home">
+           </i>
+           <span>
+            Localidad natal
+           </span>
+          </li>
+          <li>
+           <i class="fas fa-heart">
+           </i>
+           <span>
+            Situación sentimental
+           </span>
+          </li>
+         </ul>
+         <button class="save-button">
+            Guardar
+           </button>
+        </div>
+       </div>
+</body>
+
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("userDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    document.addEventListener('click', function(event) {
+    var isClickInside = document.querySelector('.user-menu').contains(event.target);
+    var dropdown = document.getElementById("userDropdown");
+
+    if (!isClickInside) {
+        dropdown.style.display = "none";
+    }
+});
+</script>
+</html>
