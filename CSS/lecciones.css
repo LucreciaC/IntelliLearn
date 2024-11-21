@@ -786,7 +786,77 @@
 }
 
 @media (max-width: 768px) {
+    .navbar-logo {
+        position: absolute;
+        left: -20px;
+        display: flex
+    } 
     .course-card {
-        width: 100%;
+        width: 80%;
+    }
+
+    .menuIcon {
+        cursor: pointer;
+    width: 32px;
+    height: 24px;
+    position: absolute;
+    right: 20px; /* Alinea a la derecha */
+    flex-direction: column;
+    z-index: 1001;
+    }
+    .header .navbar .icons {
+        margin-left: 450px;
+        
+    }
+
+}
+@media (max-width: 430px) {
+    .navbar {
+        height: 140px;
+    }
+    .navbar-logo {
+        position: absolute;
+        left: -20px;
+        display: flex
+    }
+
+    .header .navbar .icons {
+        margin-left: auto;
+        margin-top: 85px;
+    }
+
+    .header .navbar .icons i {
+        font-size: 12px;
+    }
+
+    .menuIcon {
+        cursor: pointer;
+    width: 32px;
+    height: 24px;
+    position: absolute;
+    right: 20px; /* Alinea a la derecha */
+    flex-direction: column;
+    z-index: 1001;
+    }
+    
+    .user-menu .dropdown {
+        top: 42px;
+    }
+
+    .settings-dropdown {
+        right: 0px;
+    top: 140px;
+    }
+}
+
+@media (max-width: 320px) {
+    #sidebar {
+        width: 100%; /* Cambia el ancho en pantallas pequeñas */
+    }
+    .navbar-logo .logo {
+        width: 200px;
+    }
+    .content h1 {
+        font-size: 28px;
     }
 }
