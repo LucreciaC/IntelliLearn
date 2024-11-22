@@ -322,3 +322,73 @@ background: #FFDB83;
   }
 
  
+/* Responsive Pantallas Pequeñas */
+@media (max-width: 768px) {
+  .intro {
+    height: 60vh; /* Reducir altura en pantallas más pequeñas */
+  }
+
+  .intro-image {
+    object-fit: contain; /* Ajustar la imagen */
+  }
+
+ 
+  .hero-section {
+    padding: 20px; /* Reducir padding */
+  }
+
+  .hero-section h1 {
+    font-size: 24px; /* Ajustar tamaño de fuente */
+  }
+
+  .hero-section p {
+    font-size: 16px; /* Reducir tamaño de fuente */
+  }
+
+  .search-container {
+    width: 100%; /* Hacer que ocupe toda la pantalla */
+  }
+
+  .search-container input[type='text'] {
+    width: 100%; /* Ajustar ancho */
+  }
+
+  .footer {
+    flex-direction: column; /* Apilar contenido */
+    align-items: center;
+    padding: 20px; /* Reducir padding */
+    height: auto; /* Ajustar altura */
+  }
+}
+
+/* Responsive Muy Pequeñas */
+@media (max-width: 480px) {
+  .intro {
+    height: 50vh; /* Reducir altura aún más */
+  }
+
+  .partner-logos {
+    flex-direction: column; /* Apilar logos */
+    align-items: center;
+  }
+
+  .partner-logos img {
+    max-width: 80px; /* Reducir tamaño de logos */
+  }
+
+  
+  .features h2 {
+    font-size: 20px; /* Reducir tamaño de encabezados */
+  }
+
+  .features {
+    padding: 20px 10px; /* Reducir padding */
+  }
+
+  .footer {
+    flex-direction: column; /* Apilar contenido */
+    text-align: center; /* Centrar contenido */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 10px;
+  }
+}
