@@ -1,7 +1,19 @@
-body {
-    background-color: #fefcbf; /* bg-yellow-100 */
-}
 
+/* Logo */
+.navbar-logo {
+    position: absolute;
+    top: 20px;  /* Añade esta línea para posicionar desde arriba */
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+  
+  .navbar-logo .logo {
+    width: 249px;
+    height: 137px;
+    object-fit: cover;
+  }
+  
 .bg-yellow-200 {
     background-color: #FFEAB6; /* bg-yellow-200 */
     border-radius: 3rem;
@@ -33,6 +45,9 @@ body {
 .w-full {
     width: 90%; /* w-full */
 }
+.w-fullb{
+    width: 100%; /* w-full */
+}
 
 .p-2 {
     padding: 1rem; /* p-2 */
@@ -46,9 +61,6 @@ body {
     border-radius: 0.25rem; /* rounded */
 }
 
-.text-blue-600 {
-    color: #1d4ed8; /* text-blue-600 */
-}
 
 .bg-gray-300 {
     background-color: #d1d5db; /* bg-gray-300 */
@@ -86,5 +98,86 @@ body {
 .text-sm {
     font-size: 0.875rem; /* text-sm */
 }
+.bg-yellow-200 {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+/* Contenedor de los botones */
+.flex.justify-between {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Espaciado entre botones */
+    margin-bottom: 1rem;
+}
+
+/* Estilo general de los botones */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A7C5C5; /* Color de fondo */
+    color: #ffffff; /* Letra blanca */
+    border: none;
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de letra */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    text-decoration: none; /* Eliminar subrayado en el texto */
+    width: 48%;
+}
+
+/* Espaciado entre ícono y texto */
+button svg {
+    margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: #007BFF; /* Azul al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom leve */
+}
+
+/* Asegurar que el enlace dentro del botón adopte el estilo */
+button a {
+    color: inherit; /* Heredar color del botón */
+    text-decoration: none; /* Sin subrayado */
+}
 
 
+
+@media (max-width: 768px) {
+    .w-96 {
+        width: 50%; /* Ajustar para pantallas pequeñas */
+        margin-top: 80px;
+        margin: 0 auto;
+    }
+
+     /* Asegurarse de que el logo esté encima del formulario */
+     .navbar-logo {
+      
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        margin-bottom: 1rem; /* Separación con el formulario */
+        top: 0; /* Remover cualquier desplazamiento vertical */
+    }
+
+    .navbar-logo .logo {
+        width: 150px; /* Tamaño ajustado para pantallas pequeñas */
+        height: auto;
+    }
+
+    /* Ajustar el contenedor del formulario */
+    .form-container {
+        margin-top: 0; /* Remover márgenes superiores */
+        padding-top: 0; /* Opcional: ajustar el padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .w-96 {
+        width: 90%; /* Maximizar uso del espacio */
+        padding: 1rem; /* Reducir padding */
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+}
