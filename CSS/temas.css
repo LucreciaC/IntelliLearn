@@ -653,7 +653,7 @@ textarea:focus {
     border-radius: 8px;
     width: 80%; /* Ancho adaptable */
     max-width: 900px; /* Ancho máximo */
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .modal-content {
