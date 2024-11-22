@@ -10,7 +10,7 @@
 </head>
 <body>
   
-        <div class="hamburger" onclick="toggleSidebar()">
+        <div class="hamburger" onclick="toggleSidebar1()">
             <span></span>
             <span></span>
             <span></span>
@@ -56,6 +56,24 @@
                     </div>
                 </div>
             </div>
+            <div class="sidebar1 hidden"> <!-- Asegúrate de que tenga la clase 'hidden' inicialmente -->
+                <a href="/Index.html"><h2>IntelliLearn</h2></a>
+                <hr>
+                <a href="#"><i class="fas fa-comments" onclick="toggleSidebar()"></i>Chat</a>
+                <a href="/ASSETS/PDF/Certificado de Reconocimiento.pdf"><i class="fas fa-download"></i>Certificado</a>
+                <a href="#" onclick="toggleNotifications()"><i class="fas fa-bell"></i>Notificaciones</a>
+                <div id="notifications" class="notifications hidden">
+                    <h3>Notificaciones</h3>
+                    <ul>
+                        <li>Notificación 1: Has completado una lección.</li>
+                        <li>Notificación 2: Tienes un nuevo mensaje.</li>
+                        <li>Notificación 3: Tu certificado está disponible para descarga.</li>
+                    </ul>
+                </div>
+                <hr>
+                <a href="#"><i class="fas fa-calendar-alt"></i>Eventos</a>
+            </div>
+            
             <div class="main-content">
                 <h2>¡Bienvenidos! Mucha Suerte</h2>
                 <div class="course-material">
@@ -315,10 +333,7 @@
             </div>
         </div>
     <script>
-        function toggleSidebar() {
-            document.querySelector('.sidebar').classList.toggle('active');
-            document.querySelector('.hamburger').classList.toggle('active');
-        }
+       
         function changeIconColor(button) {
             const statusIcon = button.closest('.program-item').querySelector('.status .icon');
             statusIcon.style.color = 'green';
@@ -391,7 +406,11 @@ document.getElementById('modalOverlay').addEventListener('click', function(event
     }
 });
 
-
+function toggleSidebar1() {
+    const sidebar = document.querySelector('.sidebar1');
+    sidebar.classList.toggle('active'); // Alternar la clase active
+    document.querySelector('.hamburger').classList.toggle('active'); // Alternar la clase active para el botón hamburguesa
+}
 </script>
 
 </body>

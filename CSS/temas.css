@@ -39,6 +39,7 @@ body {
     background-color: #8b6f2e; /* Darker color for the separator */
     margin: 10px 0;
 }
+
 .content {
     margin-left: 200px;
     padding: 0;
@@ -77,8 +78,8 @@ body {
 .dropdown {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 48px;
+    right: -20px;
     background-color: #f0d78c;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1001;
@@ -750,7 +751,7 @@ textarea:focus {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1000;
+        z-index: 1006;
     }
     .sidebar1.active {
         transform: translateX(0);
@@ -846,5 +847,45 @@ textarea:focus {
         margin-bottom: 10px; /* Added margin to separate status icon */
         order: -1; /* Move status icon to the top */
         align-self: flex-end; /* Align status icon to the right */
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar1 {
+        transform: translateX(-100%); /* Ocultar inicialmente */
+        transition: transform 0.3s ease; /* Transición suave */
+        z-index: 1006;
+    }
+    
+    .sidebar1.active {
+        transform: translateX(0); /* Mostrar el sidebar */
+    }
+
+    .modal {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 90%; /* Adaptable para móviles */
+        max-width: 600px; /* Ancho máximo */
+        max-height: 80%; /* Altura máxima para evitar desbordamiento */
+        overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        display: flex;
+        flex-direction: column; /* Asegura una disposición vertical para el contenido */
+    }
+
+    .sidebar {
+        width: 100%; /* Ocupa toda la pantalla en dispositivos pequeños */
+        height: 100vh; /* Altura completa de la ventana */
+        right: 0; /* Alineado al lado derecho */
+        z-index: 1100;
     }
 }
