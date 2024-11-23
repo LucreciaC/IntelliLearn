@@ -102,8 +102,9 @@
             </div>
         </div>
         <div class="overlay" id="overlay" onclick="toggleMenu()">
-            <button class="close-btn" onclick="toggleMenu()">&times;</button>
-        </div>
+          <button class="close-btn" onclick="toggleMenu(); event.stopPropagation();">&times;</button>
+      </div>
+      
         <div class="navbarMobile" id="navbarMobile">
             <ul>
                 <li><a href="#">Inicio</a></li>
@@ -308,7 +309,7 @@
     </div>
 </footer>
     
-   
+<script src="/JS/hamburger-menu.js"></script>
     <script src="/JS/navbar-menu.js"></script>
 
     <script>
@@ -397,8 +398,7 @@ function showMainMenu() {
     toggleSubMenu('main');
 }
 
-// Event listener para cerrar el menú al hacer clic en el overlay
-document.querySelector('.overlay').addEventListener('click', toggleMenu);
+
         </script>
 </body>
 </html>

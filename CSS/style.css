@@ -34,22 +34,20 @@ body:has(.intro) .home-content {
     box-sizing: border-box;
   }
   
-.header{
+  .header{
     position: sticky;
     top: 0;
     z-index: 2;
 }
 .navbar {
-  height: 100px;
-  background-color: rgba(235, 217, 172, 1); /* Transparencia */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  backdrop-filter: blur(5px); /* Difumina el fondo detrás */
-}
-
+    height: 100px;
+    background-color: rgba(235, 217, 172, 1);
+    display: flex;
+    align-items: center; /* Centramos verticalmente los elementos */
+    justify-content: center; /* Centramos horizontalmente el contenido */
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
   
   /* Logo */
   .navbar-logo {
@@ -233,6 +231,28 @@ body:has(.intro) .home-content {
 }
 
 
+.header .navbar  .icons {
+    display: flex;
+    align-items: center;
+}
+.header .navbar  .icons i {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f8d77d;
+    padding: 10px;
+    border-radius: 30%;
+}
+.header .navbar  .icons .fa-envelope {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-cog {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-user-circle {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+
 
 
  .hero-section {
@@ -300,7 +320,13 @@ body:has(.intro) .home-content {
           background-color: #fff;
           padding: 40px 20px;
           text-align: center;
+         
       }
+
+      .accordion-item {
+        z-index: 1;
+      }
+
       .features h2 {
           font-size: 28px;
           font-weight: 700;
@@ -326,6 +352,7 @@ background: #FFDB83;
 @media (max-width: 768px) {
   .intro {
     height: 60vh; /* Reducir altura en pantallas más pequeñas */
+    background-color: rgba(235, 217, 172, 1);
   }
 
   .intro-image {
@@ -362,9 +389,17 @@ background: #FFDB83;
 }
 
 /* Responsive Muy Pequeñas */
+@media (max-width: 375px) {
+  .intro {
+    margin-top: -40px !important; 
+    margin-bottom: -40px !important;
+  }
+}
 @media (max-width: 480px) {
   .intro {
     height: 50vh; /* Reducir altura aún más */
+    margin-top: -25px;
+    margin-bottom: -25px;
   }
 
   .partner-logos {
