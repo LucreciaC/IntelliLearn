@@ -1,9 +1,9 @@
 /* Logo */
 .navbar-logo {
     position: absolute;
-    left: 345px; /* Mueve el logo 10px hacia la izquierda */
+    left: 700px; /* Mueve el logo más a la derecha */
     display: flex;
-    align-items: center; /* Alinea el logo verticalmente también */
+    align-items: center; /* Alinea el logo verticalmente */
 }
 
 .navbar-logo .logo {
@@ -15,3 +15,36 @@
 .hidden {
     display: none;
 }
+
+/* Responsividad para el logo */
+@media (max-width: 768px) {
+    .navbar-logo {
+        left: 50px; /* Ajusta la posición más a la derecha en pantallas pequeñas */
+    }
+    .navbar-logo .logo {
+        width: 150px;
+        height: auto;
+    }
+}
+
+/* Ajustes para el dropdown */
+#dropdownMenu {
+    position: absolute;
+    top: 30%; /* Posición debajo del botón */
+    left: 0; /* Se alinea con el lado izquierdo del botón */
+    z-index: 1000;
+    width: 200px;
+    max-height: 300px; /* Limita la altura máxima del menú */
+    overflow-y: auto; /* Permite que se desplace si es necesario */
+    display: none; /* Inicialmente oculto */
+}
+
+/* Mostrar el menú cuando se haga clic en el botón "Crear" */
+#dropdownMenu.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
