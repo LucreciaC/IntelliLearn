@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
+
   
 .header{
     position: sticky;
@@ -199,4 +200,15 @@ button:hover {
 button:active {
   transform: scale(0.98); 
   background-color: #8FA7A7; 
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;    /* Centra verticalmente */
+  height: 100vh;          /* Ocupa toda la altura de la ventana */
+}
+
+.content {
+  text-align: center; /* Opcional: centra el texto dentro del elemento */
 }
