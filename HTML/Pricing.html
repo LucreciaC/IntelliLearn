@@ -13,244 +13,155 @@
     
 </head>
 <body class="bg-white">
-    <div class="bg-yellow-200 p-4 flex justify-between items-center">
-     <div class="flex items-center">
+  <div class="bg-yellow-200 p-4 flex justify-between items-center">
+    <div class="flex items-center">
       <div class="navbar-logo">
         <a href="/Index.html">
-            <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+          <img alt="Logo" class="logo w-12 h-12" src="/ASSETS/Images/Logo.png" />
         </a>
+      </div>
     </div>
-          
-     </div>
-     <a class="text-blue-600" href="#">
-      Cancelar
-     </a>
+    <a class="text-blue-600" href="#">Cancelar</a>
+  </div>
+  <div class="text-center mt-8">
+    <h1 class="text-3xl font-bold">Plan</h1>
+    <p class="text-lg mt-2">Elija un plan perfecto para tu aprendizaje</p>
+  </div>
+  <div class="flex justify-center items-center flex-wrap mt-4">
+    <label class="flex items-center">
+      <input class="mr-2" type="checkbox" />
+      <span>Paga mensualmente</span>
+    </label>
+    <label class="flex items-center ml-4">
+      <input class="mr-2" type="checkbox" />
+      <span>Paga anualmente</span>
+    </label>
+    <div class="ml-4 text-blue-600 flex items-center">
+      <i class="fas fa-arrow-right"></i>
+      <span class="ml-2">Save 25%</span>
     </div>
-    <div class="text-center mt-8">
-     <h1 class="text-3xl font-bold">
-      Plan
-     </h1>
-     <p class="text-lg mt-2">
-      Elija un plan perfecto para tu aprendizaje
-     </p>
-    </div>
-    <div class="flex justify-center items-center mt-4">
-     <label class="flex items-center">
-      <input class="mr-2" type="checkbox"/>
-      <span>
-        Paga mensualmente
-      </span>
-     </label>
-     <label class="flex items-center ml-4">
-      <input class="mr-2" type="checkbox"/>
-      <span>
-        Paga anualmente
-      </span>
-     </label>
-     <div class="ml-4 text-blue-600 flex items-center">
-      <i class="fas fa-arrow-right">
-      </i>
-      <span class="ml-2">
-       Save 25%
-      </span>
-     </div>
-    </div>
-    <div class="flex justify-center mt-8">
-     <div class="w-1/4 p-4">
-      <h2 class="text-xl font-bold">
-        Básico
-      </h2>
-      <p class="mt-2">
-        Ideal para quienes buscan iniciarse en un nuevo tema o habilidad.
-      </p>
+  </div>
+  <div class="flex flex-wrap justify-center mt-8 gap-4">
+    <!-- Plan Básico -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 border rounded-lg">
+      <h2 class="text-xl font-bold">Básico</h2>
+      <p class="mt-2">Ideal para quienes buscan iniciarse en un nuevo tema o habilidad.</p>
       <p class="text-4xl font-bold mt-4">
-       $0
-       <span class="text-lg font-normal">
-        / Mes
-       </span>
+        $0 <span class="text-lg font-normal">/ Mes</span>
       </p>
-      <button class="mt-4 w-full py-2 border border-blue-600 text-blue-600 font-bold"><a href="/HTML/procesoCompra1.html">Inicia Ahora</a></button>
-      
+      <button class="mt-4 w-full py-2 border border-blue-600 text-blue-600 font-bold">
+        <a href="/HTML/procesoCompra1.html">Inicia Ahora</a>
+      </button>
       <ul class="mt-4 space-y-2">
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Acceso a 5 lecciones básicas por curso
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Recursos en formato PDF y videos de introducción
-        </span>
-       </li>
-       <li class="flex items-center text-gray-400">
-        <i class="fas fa-times-circle mr-2">
-        </i>
-        <span>
-          Acceso a una comunidad básica para resolver dudas
-        </span>
-       </li>
-       <li class="flex items-center text-gray-400">
-        <i class="fas fa-times-circle mr-2">
-        </i>
-        <span>
-          Proyectos prácticos para empezar
-        </span>
-       </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Acceso a 5 lecciones básicas por curso</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Recursos en formato PDF y videos de introducción</span>
+        </li>
+        <li class="flex items-center text-gray-400">
+          <i class="fas fa-times-circle mr-2"></i>
+          <span>Acceso a una comunidad básica para resolver dudas</span>
+        </li>
+        <li class="flex items-center text-gray-400">
+          <i class="fas fa-times-circle mr-2"></i>
+          <span>Proyectos prácticos para empezar</span>
+        </li>
       </ul>
-     </div>
-     <div class="w-1/4 p-4 bg-blue-600 text-white rounded-lg shadow-lg">
-      <h2 class="text-xl font-bold">
-        Avanzado
-      </h2>
-      <p class="mt-2">
-        Perfecto para estudiantes que desean profundizar y dominar nuevas habilidades.
-      </p>
+    </div>
+    <!-- Plan Avanzado -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 bg-blue-600 text-white rounded-lg shadow-lg">
+      <h2 class="text-xl font-bold">Avanzado</h2>
+      <p class="mt-2">Perfecto para estudiantes que desean profundizar y dominar nuevas habilidades.</p>
       <p class="text-4xl font-bold mt-4">
-       $74.99
-       <span class="text-lg font-normal">
-        / Mes
-       </span>
+        $74.99 <span class="text-lg font-normal">/ Mes</span>
       </p>
-      <button class="mt-4 w-full py-2 border border-white-600 text-white-600 font-bold"><a href="/HTML/procesoCompra1.html">
-        Inicia Ahora</a></button>
+      <button class="mt-4 w-full py-2 border border-white text-white font-bold">
+        <a href="/HTML/procesoCompra1.html">Inicia Ahora</a>
+      </button>
       <ul class="mt-4 space-y-2">
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Acceso a 5 lecciones básicas por curso
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Recursos en formato PDF y videos de introducción
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Acceso a una comunidad básica para resolver dudas
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Proyectos prácticos para empezar
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Acceso a todos los módulos avanzados de los cursos
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Material exclusivo: guías interactivas y plantillas descargables
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Retroalimentación personalizada en proyectos
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-white mr-2">
-        </i>
-        <span>
-          Certificados de finalización avalados por expertos
-        </span>
-       </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Acceso a 5 lecciones básicas por curso</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Recursos en formato PDF y videos de introducción</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Acceso a una comunidad básica para resolver dudas</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Proyectos prácticos para empezar</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Acceso a todos los módulos avanzados de los cursos</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Material exclusivo: guías interactivas y plantillas descargables</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Retroalimentación personalizada en proyectos</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-white mr-2"></i>
+          <span>Certificados de finalización avalados por expertos</span>
+        </li>
       </ul>
-     </div>
-     <div class="w-1/4 p-4">
-      <h2 class="text-xl font-bold">
-        Empresarial
-      </h2>
-      <p class="mt-2">
-        Pensado para empresas y equipos que buscan capacitar a su personal de manera efectiva.
-      </p>
+    </div>
+    <!-- Plan Empresarial -->
+    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 border rounded-lg">
+      <h2 class="text-xl font-bold">Empresarial</h2>
+      <p class="mt-2">Pensado para empresas y equipos que buscan capacitar a su personal de manera efectiva.</p>
       <p class="text-4xl font-bold mt-4">
-       $100
-       <span class="text-lg font-normal">
-        / Mes
-       </span>
+        $100 <span class="text-lg font-normal">/ Mes</span>
       </p>
-      <button class="mt-4 w-full py-2 border border-blue-600 text-blue-600 font-bold"><a href="/HTML/procesoCompra1.html">
-        Inicia Ahora</a></button>
+      <button class="mt-4 w-full py-2 border border-blue-600 text-blue-600 font-bold">
+        <a href="/HTML/procesoCompra1.html">Inicia Ahora</a>
+      </button>
+      <ul class="mt-4 space-y-2">
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Acceso a todos los módulos avanzados de los cursos</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Material exclusivo: guías interactivas y plantillas descargables</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Retroalimentación personalizada en proyectos</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Certificados de finalización avalados por expertos</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Plan de aprendizaje personalizado según las necesidades de la empresa</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Soporte y asesoría exclusiva</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Reportes detallados de progreso y rendimiento</span>
+        </li>
+        <li class="flex items-center">
+          <i class="fas fa-check-circle text-blue-600 mr-2"></i>
+          <span>Acceso a todos los cursos para equipos de hasta 10 personas</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
 
-      <ul class="mt-4 space-y-2">
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Acceso a todos los módulos avanzados de los cursos    
-                </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Material exclusivo: guías interactivas y plantillas descargables
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Retroalimentación personalizada en proyectos
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Certificados de finalización avalados por expertos
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Plan de aprendizaje personalizado según las necesidades de la empresa
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Soporte y asesoría exclusiva
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Reportes detallados de progreso y rendimiento
-        </span>
-       </li>
-       <li class="flex items-center">
-        <i class="fas fa-check-circle text-blue-600 mr-2">
-        </i>
-        <span>
-          Acceso a todos los cursos para equipos de hasta 10 personas
-        </span>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </body>
 </html>
