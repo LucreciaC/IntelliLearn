@@ -11,416 +11,110 @@
     <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-gray-100 font-sans">
-    <header class="bg-yellow-200 p-4 flex justify-between items-center">
-     
-      <div class="navbar-logo">
+  <header class="bg-yellow-200 p-4 flex flex-wrap justify-between items-center">
+       <!-- Logo -->
+       <div class="navbar-logo flex-shrink-0">
         <a href="/Index.html">
-            <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+            <img alt="Logo" class="logo h-12" src="/ASSETS/Images/Logo.png" />
         </a>
     </div>
-     
-    <nav class="flex justify-end w-full">
-        <a class="text-black" href="/HTML/subirContenido.html">
-          Subir contenido
+
+    <!-- Navegación -->
+    <nav class="flex-grow flex justify-end">
+        <a class="text-black text-sm md:text-base hover:underline" href="/HTML/subirContenido.html">
+            Subir contenido
         </a>
-      </nav>
-      
-      
-      
-    </header>
-    <main class="p-8">
-     <div class="flex items-center mb-8">
-      <img alt="User profile picture" class="rounded-full mr-4" height="100" src="https://storage.googleapis.com/a1aa/image/II0Iy6hsDF4nKBn4MI0AfO5xgDsQC9i0kPclLLZTsmVFc83JA.jpg" width="100"/>
-      <div>
-       <h1 class="text-2xl font-bold">
-        Bienvenido/a, [Usuario]
-       </h1>
-       <p>
-        Rol
-       </p>
+    </nav>
+</header>
+  <main class="p-4 sm:p-8">
+      <div class="flex flex-wrap items-center mb-8">
+          <img alt="User profile picture" class="rounded-full mr-4 w-20 h-20 sm:w-24 sm:h-24" src="https://storage.googleapis.com/a1aa/image/II0Iy6hsDF4nKBn4MI0AfO5xgDsQC9i0kPclLLZTsmVFc83JA.jpg" />
+          <div>
+              <h1 class="text-xl sm:text-2xl font-bold">Bienvenido/a, [Usuario]</h1>
+              <p class="text-sm sm:text-base">Rol</p>
+          </div>
       </div>
-     </div>
-     <div class="grid grid-cols-3 gap-8">
-      <div class="col-span-2">
-       <h2 class="text-xl font-bold mb-4">
-        Cursos
-       </h2>
-       
-       <table class="min-w-full bg-white rounded-lg shadow overflow-hidden">
-        <thead class="bg-gray-50">
-         <tr>
-          <th class="py-2 px-4 text-left">
-           Curso
-          </th>
-          <th class="py-2 px-4 text-left">
-           Estado
-          </th>
-          <th class="py-2 px-4 text-left">
-           Proyecto
-          </th>
-          <th class="py-2 px-4 text-left"><a href="/HTML/alumnosCursos.html">
-           Alumnos
-           </a></th>
-          <th class="py-2 px-4 text-left">
-           Progreso
-          </th>
-         </tr>
-        </thead>
-        <tbody>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Catalog logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/bVQifoTqPb3MMK6ZQqUxODTlosHD3W7P2uEJ55VlGVWHc83JA.jpg" width="30"/>
-           <div>
-            <p>
-             Diseño Web
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Blog basico
-           </p>
-           <p class="text-sm text-gray-500">
-            Diseño de un blog con artículos y una interfaz intuitiva para leer contenido.
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 2" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/TBugJJTNevSzcqcmjdV30dSdeUawNrv0FkZ3J0SJSq0634vTA.jpg" width="30"/>
-           <img alt="User 3" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/BG7FyPfSX6VINCjjSPQjECAU4jer86aeiTqHmarq1ReRgjfdC.jpg" width="30"/>
-           <img alt="User 4" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/NC9MM7efIzutIkNglnchVTfZIed5s8NygWfyOEmIvvnFBHf7E.jpg" width="30"/>
-           <img alt="User 5" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/AfkRtOzGVeuDmk5EwWevZpPe6Zhq6LJMarZR7H5D4OMsgjfdC.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +5
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 70%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             70%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Circooles logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/Pk7j0K4u9UbgHFe1S4JcSZTh2vhT0DNAHFpFecdx22e2vxfOB.jpg" width="30"/>
-           <div>
-            <p>
-             Desarrollo Frontend
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            Terminado
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Aplicación de clima
-             </p>
-           <p class="text-sm text-gray-500">
-            Sitio que consume una API de clima y muestra el pronóstico según la ubicación del usuario.
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 2" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/TBugJJTNevSzcqcmjdV30dSdeUawNrv0FkZ3J0SJSq0634vTA.jpg" width="30"/>
-           <img alt="User 3" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/BG7FyPfSX6VINCjjSPQjECAU4jer86aeiTqHmarq1ReRgjfdC.jpg" width="30"/>
-           <img alt="User 5" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/AfkRtOzGVeuDmk5EwWevZpPe6Zhq6LJMarZR7H5D4OMsgjfdC.jpg" width="30"/>
-            <span class="text-sm text-gray-500">
-            +8
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 60%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             60%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Command+R logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/QZxiUw6ofetUeJsVVwX0a2G1ChqeER14khkCk96nvGvDgjfdC.jpg" width="30"/>
-           <div>
-            <p>
-             Desarrollo FullStack
-            </p>
-           
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Tienda online
-           </p>
-           <p class="text-sm text-gray-500">
-            Catálogo de productos, carrito de compras, y sistema de pago básico (puedes usar una API simulada para pagos).
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 2" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/TBugJJTNevSzcqcmjdV30dSdeUawNrv0FkZ3J0SJSq0634vTA.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +2
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 30%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             30%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Hourglass logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/wQV1GVeRZ037eUznGz7TxDJ4dmeLtfDwoEEIGzdakkJ7fGf7E.jpg" width="30"/>
-           <div>
-            <p>
-             Maketing Digital
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Campaña de Concientización
-           </p>
-           <p class="text-sm text-gray-500">
-            Crear una estrategia digital para una ONG o causa social, enfocándose en engagement y donaciones.
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 2" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/TBugJJTNevSzcqcmjdV30dSdeUawNrv0FkZ3J0SJSq0634vTA.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +2
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 80%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             80%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Layers logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/gwGyyx6wTmpsMNHW1VnekuebiOHSbMeKUQYVRxP5F7XEwxfOB.jpg" width="30"/>
-           <div>
-            <p>
-             Estrategias de Marketing
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            Terminado
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Reactivación de una Marca
-           </p>
-           <p class="text-sm text-gray-500">
-            Estrategia para revitalizar una marca establecida que ha perdido relevancia.
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +1
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 20%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             20%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Quotient logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/cfzjYHSWYV2qTSusJzw5qunpMBePpK6QeTkis3T82effAOe3JA.jpg" width="30"/>
-           <div>
-            <p>
-             Youtube Marketing
-            </p>
-          
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Campaña Publicitaria en YouTube Ads
-           </p>
-           <p class="text-sm text-gray-500">
-            Diseñar una campaña de anuncios en video con segmentación precisa para un público objetivo.
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 3" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/BG7FyPfSX6VINCjjSPQjECAU4jer86aeiTqHmarq1ReRgjfdC.jpg" width="30"/>
-           <img alt="User 5" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/AfkRtOzGVeuDmk5EwWevZpPe6Zhq6LJMarZR7H5D4OMsgjfdC.jpg" width="30"/>
-           <img alt="User 6" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/aOXekfagkMgbckfrdj4wU4DoGW8SiEX6zkoqx7yzQYpbwxfOB.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +6
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 10%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             10%
-            </span>
-           </div>
-          </td>
-         </tr>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Sisyphus logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/YcnYOe6ewsgWyEpJcxaKcU5e1bt0CHZGwcfRS2u34rWcgjfdC.jpg" width="30"/>
-           <div>
-            <p>
-             Liderazgo
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Simulación de Liderazgo en una Crisis
-           </p>
-           <p class="text-sm text-gray-500">
-            Desarrollar un plan de acción y liderazgo para manejar una situación crítica (conflictos internos, crisis reputacional, etc.).
-           </p>
-          </td>
-          <td class="py-2 px-4 flex items-center">
-           <img alt="User 1" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" width="30"/>
-           <img alt="User 2" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/TBugJJTNevSzcqcmjdV30dSdeUawNrv0FkZ3J0SJSq0634vTA.jpg" width="30"/>
-           <img alt="User 3" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/BG7FyPfSX6VINCjjSPQjECAU4jer86aeiTqHmarq1ReRgjfdC.jpg" width="30"/>
-           <img alt="User 4" class="rounded-full mr-1" height="30" src="https://storage.googleapis.com/a1aa/image/NC9MM7efIzutIkNglnchVTfZIed5s8NygWfyOEmIvvnFBHf7E.jpg" width="30"/>
-           <span class="text-sm text-gray-500">
-            +4
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <div class="flex items-center">
-            <div class="w-full bg-gray-200 rounded-full h-2.5 mr-2">
-             <div class="bg-purple-600 h-2.5 rounded-full" style="width: 40%">
-             </div>
-            </div>
-            <span class="text-sm text-gray-500">
-             40%
-            </span>
-           </div>
-          </td>
-         </tr>
-        </tbody>
-       </table>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div class="col-span-1 md:col-span-2">
+              <h2 class="text-lg sm:text-xl font-bold mb-4">Cursos</h2>
+              <div class="overflow-x-auto">
+                  <table class="min-w-full bg-white rounded-lg shadow overflow-hidden">
+                      <thead class="bg-gray-50">
+                          <tr>
+                              <th class="py-2 px-4 text-left text-sm sm:text-base">Curso</th>
+                              <th class="py-2 px-4 text-left text-sm sm:text-base">Estado</th>
+                              <th class="py-2 px-4 text-left text-sm sm:text-base">Proyecto</th>
+                              <th class="py-2 px-4 text-left text-sm sm:text-base">
+                                  <a href="/HTML/alumnosCursos.html">Alumnos</a>
+                              </th>
+                              <th class="py-2 px-4 text-left text-sm sm:text-base">Progreso</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Reemplaza las filas aquí con los datos dinámicos -->
+                          <tr class="border-t">
+                              <td class="py-2 px-4 flex items-center">
+                                  <img alt="Catalog logo" class="rounded-full mr-2 w-8 h-8" src="https://storage.googleapis.com/a1aa/image/bVQifoTqPb3MMK6ZQqUxODTlosHD3W7P2uEJ55VlGVWHc83JA.jpg" />
+                                  <div>
+                                      <p class="text-sm sm:text-base">Diseño Web</p>
+                                  </div>
+                              </td>
+                              <td class="py-2 px-4">
+                                  <span class="bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-2.5 py-0.5 rounded">En progreso</span>
+                              </td>
+                              <td class="py-2 px-4">
+                                  <p class="text-sm sm:text-base">Blog básico</p>
+                                  <p class="text-xs sm:text-sm text-gray-500">Diseño de un blog con artículos y una interfaz intuitiva para leer contenido.</p>
+                              </td>
+                              <td class="py-2 px-4 flex items-center space-x-1">
+                                  <img alt="User 1" class="rounded-full w-6 h-6" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" />
+                                  <span class="text-xs sm:text-sm text-gray-500">+5</span>
+                              </td>
+                              <td class="py-2 px-4">
+                                  <div class="flex items-center">
+                                      <div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+                                          <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                                      </div>
+                                      <span class="text-xs sm:text-sm text-gray-500">70%</span>
+                                  </div>
+                              </td>
+                          </tr>
+                          <!-- Más filas -->
+                          <tr class="border-t">
+                            <td class="py-2 px-4 flex items-center">
+                                <img alt="Catalog logo" class="rounded-full mr-2 w-8 h-8" src="https://storage.googleapis.com/a1aa/image/bVQifoTqPb3MMK6ZQqUxODTlosHD3W7P2uEJ55VlGVWHc83JA.jpg" />
+                                <div>
+                                    <p class="text-sm sm:text-base">Desarrollo Frontend</p>
+                                </div>
+                            </td>
+                            <td class="py-2 px-4">
+                                <span class="bg-green-100 text-green-800 text-xs sm:text-sm font-semibold px-2.5 py-0.5 rounded">En progreso</span>
+                            </td>
+                            <td class="py-2 px-4">
+                                <p class="text-sm sm:text-base">Aplicación de clima</p>
+                                <p class="text-xs sm:text-sm text-gray-500">Sitio que consume una API de clima y muestra el pronóstico según la ubicación del usuario.</p>
+                            </td>
+                            <td class="py-2 px-4 flex items-center space-x-1">
+                                <img alt="User 1" class="rounded-full w-6 h-6" src="https://storage.googleapis.com/a1aa/image/ER9BSgsehCT9ZyAGNEcbJftogciEYibUb6cVbzUiStA434vTA.jpg" />
+                                <span class="text-xs sm:text-sm text-gray-500">+8</span>
+                            </td>
+                            <td class="py-2 px-4">
+                                <div class="flex items-center">
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mr-2">
+                                        <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                                    </div>
+                                    <span class="text-xs sm:text-sm text-gray-500">60%</span>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                      </tbody>
+                  </table>
+              </div>
+          </div>
       </div>
-      <div>
-       <h2 class="text-xl font-bold mb-4">
-        Tareas entregadas
-       </h2>
-      
-       <table class="min-w-full bg-white rounded-lg shadow overflow-hidden">
-        <thead class="bg-gray-50">
-         <tr>
-          <th class="py-2 px-4 text-left">
-           Curso
-          </th>
-          <th class="py-2 px-4 text-left">
-           Estado
-          </th>
-          <th class="py-2 px-4 text-left">
-           Proyecto
-          </th>
-         </tr>
-        </thead>
-        <tbody>
-         <tr class="border-t">
-          <td class="py-2 px-4 flex items-center">
-           <img alt="Catalog logo" class="rounded-full mr-2" height="30" src="https://storage.googleapis.com/a1aa/image/bVQifoTqPb3MMK6ZQqUxODTlosHD3W7P2uEJ55VlGVWHc83JA.jpg" width="30"/>
-           <div>
-            <p>
-             Diseño Web 
-            </p>
-            
-           </div>
-          </td>
-          <td class="py-2 px-4">
-           <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-            En progreso
-           </span>
-          </td>
-          <td class="py-2 px-4">
-           <p>
-            Bog básico
-           </p>
-           
-          </td>
-         </tr>
-         
-          </td>
-         </tr>
-        </tbody>
-       </table>
-      </div>
-     </div>
-    </main>
-   </body>
+  </main>
+</body>
+
 </html>
