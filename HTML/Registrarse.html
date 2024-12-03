@@ -8,91 +8,70 @@
     <title>Registrarse</title>
 </head>
 <body>
-    
-        <div class="navbar-logo">
-            <a href="/Index.html">
-                <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
-            </a>
-        </div>
-        <form class="row g-3">
-        <div class="container">
-         <h2>
-          Registrarse
-         </h2>
-         <div class="col-md-4">
-          <label for="validationServer01" class="form-label"></label>
-          <input type="text" class="form-control is-valid" id="validationServer01" required placeholder="First Name" type="text"/>
-        </div>
-        <div class="col-md-4">
-          <label for="validationServerUsername" class="form-label"></label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend3"></span>
-            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Nombre de usuario" type="text" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required/>
-          </div>
-          <div class="col-md-4">
-            <label for="validationServer01" class="form-label"></label>
-            <input type="text" class="form-control is-valid" id="validationServer01" required placeholder="Correo Electronico" type="email"/>
-          </div>
-          <div class="col-md-4">
-            <label for="validationServer01" class="form-label"></label>
-            <input type="text" class="form-control is-valid" id="validationServer01" required placeholder="Contraseña" type="password"/>
-          </div>
-          <div class="col-md-4">
-            <label for="validationServer01" class="form-label"></label>
-            <input type="text" class="form-control is-valid" id="validationServer01" required placeholder="Confirmar contraseña" type="password"/>
-          </div>
-         <div class="role-selection">
-          <label>
-           Seleccione su rol:
-          </label>
-          <br/>
-          <br/>
-          <input id="estudiante" name="role" type="radio" value="estudiante"/>
-          <label for="estudiante">
-           Estudiante
-          </label>
-                 <input id="profesor" name="role" type="radio" value="profesor"/>
-                 
-                 <label for="profesor">
-                 Profesor
-                 </label>
-
-            <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-                <label class="form-check-label" for="invalidCheck3">
-                  Agree to terms and conditions
-                </label>
-                <div id="invalidCheck3Feedback" class="invalid-feedback">
-                  <h6>You must agree before submitting.</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="register-button">
-           Registrarme
-          </button>
-             </div>
-          </form>
-
-          <p>Registrarse usando:</p>
-         <div class="social-login">
-          
-          <button class="google">
-            <svg width="25" height="25" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/></svg>
-            Google
-          </button>
-          <button class="microsoft">
-           <img alt="Microsoft logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" style="width: 20px; height: 20px;"/>
-           Microsoft
-          </button>
-         </div>
-         <div class="login-link">
-          ¿Ya tiene cuenta?
-          <a href="/HTML/IniciarSesion.html">
-           Inicia Sesión haciendo click aquí
+  <div class="container my-5">
+      <div class="text-center">
+          <a href="/Index.html">
+              <img alt="Logo" class="logo img-fluid mb-3" src="/ASSETS/Images/Logo.png"/>
           </a>
-         </div>
-        </div>
+      </div>
+      <h2 class="text-center">Registrarse</h2>
+      <form class="row g-3">
+          <div class="col-md-6">
+              <input type="text" class="form-control is-valid" placeholder="First Name" required />
+          </div>
+          <div class="col-md-6">
+              <input type="text" class="form-control is-valid" placeholder="Nombre de usuario" required />
+          </div>
+          <div class="col-md-6">
+              <input type="email" class="form-control is-valid" placeholder="Correo Electrónico" required />
+          </div>
+          <div class="col-md-6">
+              <input type="password" class="form-control is-valid" placeholder="Contraseña" required />
+          </div>
+          <div class="col-md-6">
+              <input type="password" class="form-control is-valid" placeholder="Confirmar Contraseña" required />
+          </div>
+          <div class="col-md-12">
+              <label>Seleccione su rol:</label><br />
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" id="estudiante" name="role" type="radio" value="estudiante" />
+                  <label class="form-check-label" for="estudiante">Estudiante</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input" id="profesor" name="role" type="radio" value="profesor" />
+                  <label class="form-check-label" for="profesor">Profesor</label>
+              </div>
+          </div>
+          <div class="col-12">
+              <div class="form-check">
+                  <input class="form-check-input is-invalid" type="checkbox" id="invalidCheck3" required />
+                  <label class="form-check-label" for="invalidCheck3">
+                      Acepto los términos y condiciones
+                  </label>
+              </div>
+          </div>
+          <div class="col-12 text-center">
+              <button class="btn btn-primary" type="submit">Registrarme</button>
+          </div>
+      </form>
+
+      <p class="text-center">Registrarse usando:</p>
+      <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-outline-primary">
+              <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                  <!-- SVG icon -->
+              </svg>
+              Google
+          </button>
+          <button class="btn btn-outline-primary">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png" alt="Microsoft Logo" style="width: 20px; height: 20px;"/>
+              Microsoft
+          </button>
+      </div>
+      <div class="text-center mt-4">
+          <p>¿Ya tienes cuenta? <a href="/HTML/IniciarSesion.html">Inicia Sesión aquí</a></p>
+      </div>
+  </div>
 </body>
+
 </html>
