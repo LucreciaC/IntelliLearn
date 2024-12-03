@@ -11,14 +11,38 @@
     z-index: 2;
 }
 .navbar {
-    height: 100px;
-    background-color: #ffeab6;
-    display: flex;
-    align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: center; /* Centramos horizontalmente el contenido */
-    padding: 0 20px;
-    box-sizing: border-box;
+  height: 100px;
+  background-color: rgba(235, 217, 172, 1);
+  display: flex;
+  align-items: center; /* Centramos verticalmente los elementos */
+  justify-content: center; /* Centramos horizontalmente el contenido */
+  padding: 0 20px;
+  box-sizing: border-box;
   }
+
+  
+
+  .header .navbar  .icons {
+    display: flex;
+    align-items: center;
+}
+.header .navbar  .icons i {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f8d77d;
+    padding: 10px;
+    border-radius: 30%;
+}
+.header .navbar  .icons .fa-envelope {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-cog {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-user-circle {
+    background-color: rgba(226, 172, 72, 0.8);
+}
   
   /* Logo */
   .navbar-logo {

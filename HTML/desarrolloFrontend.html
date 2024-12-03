@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/desarrolloFrontend.css" />
+    <link rel="stylesheet" href="/CSS/responsive.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
     <title>Desarrollo Frontend</title>
@@ -90,21 +91,58 @@
                 </li>
                 <li><a href="">Mis lecciones</a></li>
             </ul>
-            <div class="navbar-auth">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                    <path d="M22 11.5667C22 16.8499 17.5222 21.1334 12 21.1334C11.3507 21.1343 10.7032 21.0742 10.0654 20.9545C9.60633 20.8682 9.37678 20.8251 9.21653 20.8496C9.05627 20.8741 8.82918 20.9948 8.37499 21.2364C7.09014 21.9197 5.59195 22.161 4.15111 21.893C4.69874 21.2194 5.07275 20.4112 5.23778 19.5448C5.33778 19.0148 5.09 18.5 4.71889 18.1231C3.03333 16.4115 2 14.1051 2 11.5667C2 6.28357 6.47778 2 12 2C17.5222 2 22 6.28357 22 11.5667Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                    <path d="M11.9955 12H12.0045M15.991 12H16M8 12H8.00897" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                    <path d="M15.5 12C15.5 13.933 13.933 15.5 12 15.5C10.067 15.5 8.5 13.933 8.5 12C8.5 10.067 10.067 8.5 12 8.5C13.933 8.5 15.5 10.067 15.5 12Z" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M21.011 14.0965C21.5329 13.9558 21.7939 13.8854 21.8969 13.7508C22 13.6163 22 13.3998 22 12.9669V11.0332C22 10.6003 22 10.3838 21.8969 10.2493C21.7938 10.1147 21.5329 10.0443 21.011 9.90358C19.0606 9.37759 17.8399 7.33851 18.3433 5.40087C18.4817 4.86799 18.5509 4.60156 18.4848 4.44529C18.4187 4.28902 18.2291 4.18134 17.8497 3.96596L16.125 2.98673C15.7528 2.77539 15.5667 2.66972 15.3997 2.69222C15.2326 2.71472 15.0442 2.90273 14.6672 3.27873C13.208 4.73448 10.7936 4.73442 9.33434 3.27864C8.95743 2.90263 8.76898 2.71463 8.60193 2.69212C8.43489 2.66962 8.24877 2.77529 7.87653 2.98663L6.15184 3.96587C5.77253 4.18123 5.58287 4.28891 5.51678 4.44515C5.45068 4.6014 5.51987 4.86787 5.65825 5.4008C6.16137 7.3385 4.93972 9.37763 2.98902 9.9036C2.46712 10.0443 2.20617 10.1147 2.10308 10.2492C2 10.3838 2 10.6003 2 11.0332V12.9669C2 13.3998 2 13.6163 2.10308 13.7508C2.20615 13.8854 2.46711 13.9558 2.98902 14.0965C4.9394 14.6225 6.16008 16.6616 5.65672 18.5992C5.51829 19.1321 5.44907 19.3985 5.51516 19.5548C5.58126 19.7111 5.77092 19.8188 6.15025 20.0341L7.87495 21.0134C8.24721 21.2247 8.43334 21.3304 8.6004 21.3079C8.76746 21.2854 8.95588 21.0973 9.33271 20.7213C10.7927 19.2644 13.2088 19.2643 14.6689 20.7212C15.0457 21.0973 15.2341 21.2853 15.4012 21.3078C15.5682 21.3303 15.7544 21.2246 16.1266 21.0133L17.8513 20.034C18.2307 19.8187 18.4204 19.711 18.4864 19.5547C18.5525 19.3984 18.4833 19.132 18.3448 18.5991C17.8412 16.6616 19.0609 14.6226 21.011 14.0965Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-                    <path d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z" stroke="currentColor" stroke-width="1.5" />
-                </svg>
 
-            </div>
+            <div class="overlay" id="overlay" onclick="toggleMenu()">
+                <button class="close-btn" onclick="toggleMenu(); event.stopPropagation();">&times;</button>
+              </div>       
+                <div class="navbarMobile" id="navbarMobile">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <div class="separator"></div>
+                        <div class="explore-title">Explorar cursos</div>
+                        <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('desarrollo')">Desarrollo<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                        <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('diseno')">Diseño<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                        <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('marketing')">Marketing<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                        <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('negocios')">Negocios<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                        <div class="separator"></div>
+                        <li><a href="">Mis lecciones</a></li>
+
+                    </ul>
+                </div>
+                <div class="navbarMobile" id="desarrollo" style="display: none;">
+                    <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                    <ul>
+                        <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                        <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                        <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+                    </ul>
+                </div>
+                <div class="navbarMobile" id="diseno" style="display: none;">
+                    <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                    <ul>
+                        <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                        <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                        <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+                    </ul>
+                </div>
+                <div class="navbarMobile" id="marketing" style="display: none;">
+                    <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                    <ul>
+                        <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                        <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                        <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="navbarMobile" id="negocios" style="display: none;">
+                    <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                    <ul>
+                        <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                        <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                        <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+                    </ul>
+                </div>
+
+           
         </div>
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -150,5 +188,96 @@
                     <li>¡No necesitas experiencia previa, solo entusiasmo y curiosidad! 🚀</li> 
                 </ul></h6>        
             </div>
+
+            <script src="/JS/hamburger-menu.js"></script>
+          <script src="/JS/navbar-menu.js"></script>
+          <script>
+            const menuStructure = {
+                main: `
+                    
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#" class="bold">Explorar cursos</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('development')" class="with-arrow">Desarrollo <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('design')" class="with-arrow">Diseño <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('marketing')" class="with-arrow">Marketing <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('business')" class="with-arrow">Negocios <span class="arrow">→</span></a></li>
+                        <li class="separator"></li>
+                        <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
+                        <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
+                    </ul>
+                `,
+                explore: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Explorar cursos</div>
+                    <ul>
+                        <li><a href="#" onclick="toggleSubMenu('development')">Desarrollo</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('design')">Diseño</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('marketing')">Marketing</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('business')">Negocios</a></li>
+                    </ul>
+                `,
+                development: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Desarrollo</div>
+                    <ul>
+                        <li><a href="/cursos/web">Desarrollo Web</a></li>
+                        <li><a href="/cursos/mobile">Desarrollo Móvil</a></li>
+                        <li><a href="/cursos/javascript">JavaScript</a></li>
+                    </ul>
+                `,
+                design: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Diseño</div>
+                    <ul>
+                        <li><a href="/cursos/ux-ui">UX/UI Design</a></li>
+                        <li><a href="/cursos/graphic-design">Diseño Gráfico</a></li>
+                    </ul>
+                `,
+                marketing: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Marketing</div>
+                    <ul>
+                        <li><a href="/cursos/digital-marketing">Marketing Digital</a></li>
+                        <li><a href="/cursos/social-media">Social Media</a></li>
+                    </ul>
+                `,
+                business: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Negocios</div>
+                    <ul>
+                        <li><a href="/cursos/entrepreneurship">Emprendimiento</a></li>
+                        <li><a href="/cursos/finance">Finanzas</a></li>
+                    </ul>
+                `
+            };
+            
+            function toggleMenu() {
+                const menuIcon = document.querySelector('.menuIcon');
+                const navbarMobile = document.querySelector('.navbarMobile');
+                const overlay = document.querySelector('.overlay');
+                
+                menuIcon.classList.toggle('active');
+                navbarMobile.classList.toggle('active');
+                overlay.classList.toggle('active');
+            
+                if (navbarMobile.classList.contains('active')) {
+                    showMainMenu();
+                }
+            }
+            
+            function toggleSubMenu(menuType) {
+                const navbarMobile = document.querySelector('.navbarMobile');
+                navbarMobile.innerHTML = menuStructure[menuType] || menuStructure.main;
+            }
+            
+            function showMainMenu() {
+                toggleSubMenu('main');
+            }
+            
+            
+                    </script>
 </body>
 </html>
