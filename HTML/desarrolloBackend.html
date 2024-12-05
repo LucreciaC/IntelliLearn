@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/desarrolloBackend.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/responsive.css" />
 
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
+    <title>Desarrollo Backend</title>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -21,7 +23,9 @@
                 <span></span>
             </div>
             <div class="navbar-logo">
-                <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+                <a href="/Index.html">
+                    <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+                </a>
             </div>
             <ul class="navbar-menu">
                 <li>
@@ -86,11 +90,62 @@
                         </li>
                     </ul>
                 </li>
-                
-                <li><a href="/HTML/sobrenosotros.html">Mis lecciones</a></li>
+                <li><a href="">Mis lecciones</a></li>
             </ul>
             
         </div>
+
+
+        <div class="overlay" id="overlay" onclick="toggleMenu()">
+        <button class="close-btn" onclick="toggleMenu(); event.stopPropagation();">&times;</button>
+      </div>        </div>
+        <div class="navbarMobile" id="navbarMobile">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <div class="separator"></div>
+                <div class="explore-title">Explorar cursos</div>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('desarrollo')">Desarrollo<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('diseno')">Diseño<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('marketing')">Marketing<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('negocios')">Negocios<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                <div class="separator"></div>
+                <li><a href="">Mis lecciones</a></li>
+                
+            </ul>
+        </div>
+        <div class="navbarMobile" id="desarrollo" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="diseno" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="marketing" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+            </ul>
+        </div>
+        <div class="navbarMobile" id="negocios" style="display: none;">
+            <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+            <ul>
+                <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+            </ul>
+        </div>
+        
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -98,27 +153,136 @@
             </ol>
           </nav>
 
-          <div>
-          <figure>
-            <img src="/ASSETS/Images/Champagnat (2).png">
+          <div class="">
+            <div class="">
+          <h1>Desarrollo Backend</h1>
+          <figure >
+            <img class= "uni" src="/ASSETS/Images/Champagnat (2).png"> <h6>Instructor certificado: por la Universidad Champagnat</h6>
           </figure>
-          <h1>Web Development 101</h1>
-          <h4>Es un curso introductorio diseñado para quienes desean dar sus primeros pasos en el mundo del desarrollo web. A lo largo 
-            del curso, aprenderás los fundamentos de la programación web y las tecnologías clave que conforman los sitios web modernos.</h4>
-            <figure>
-                <img src="/ASSETS/Images/Champagnat (2).png"> <h6>Instructor certificado: por la Universidad Champagnat</h6>
-              </figure><h6>Instructor certificado: por la Universidad Champagnat</h6>
-            <button><a href="/HTML/Pricing.html">Elegir plan</a></button>
-            <h6><strong>Que aprenderas?</strong>
-                HTML: La estructura básica de una página web. Aprenderás a crear y organizar contenido usando etiquetas HTML.
-                CSS: El lenguaje para dar estilo a tus sitios web. Descubrirás cómo aplicar colores, fuentes, diseños y cómo hacer tus páginas atractivas y profesionales.
-                JavaScript: Introducción a la programación del lado del cliente. Aprenderás a hacer tus páginas interactivas y dinámicas, mejorando la experiencia del usuario.
-                Git & GitHub: Los conceptos básicos de control de versiones para que puedas colaborar en proyectos y mantener un historial de tus cambios.
-                Responsive Design: Cómo hacer que tus páginas web se vean bien en dispositivos de todos los tamaños, desde smartphones hasta computadoras de escritorio</h6>
-            <h6><strong>¿A quién está dirigido?</strong>
-                Este curso está diseñado para principiantes absolutos, sin necesidad de experiencia previa en programación. Es perfecto para quienes quieren aprender a construir sitios web desde cero y adquirir las habilidades básicas para avanzar en el mundo del desarrollo web.</h6>
-            <h6><strong>Requisitos previos</strong>
-                Solo necesitas una computadora, acceso a Internet y ganas de aprender. ¡El resto lo aprenderás durante el curso!</h6>    
+          <br>
+          <br>
+         <h4>Domina el desarrollo back-end y aprende a construir aplicaciones web dinámicas, escalables y seguras. Este curso te llevará desde los conceptos básicos hasta la creación de servidores robustos y la integración con bases de datos, utilizando tecnologías modernas que impulsan el funcionamiento de la web.</h4>
+          <button><a href="/HTML/Pricing.html">Elegir plan</a></button>
+          <br>
+          <br>
         </div>
+          <h6><strong>¿Que aprenderas?</strong>
+            <ul>
+            <li>Los fundamentos del desarrollo back-end y la arquitectura cliente-servidor.</li>
+            <li>Programación con lenguajes clave como PHP, Python o Node.js.</li>
+            <li>Creación y gestión de bases de datos relacionales (como MySQL) y no relacionales (como MongoDB).</li>
+            <li>Desarrollo y consumo de APIs REST y GraphQL.</li>
+            <li>Autenticación y autorización de usuarios (tokens, OAuth, JWT).</li>
+            <li>Configuración de servidores y despliegue en la nube.</li>
+            <li>Buenas prácticas de seguridad y optimización para aplicaciones back-end.</li> 
+            </ul> </h6>
+        <h6><strong>¿A quién está dirigido?</strong>
+            <ul>
+            <li>Principiantes que quieren dar sus primeros pasos en el desarrollo web.</li> 
+            <li>Front-end developers que desean complementar sus habilidades y convertirse en desarrolladores full-stack.</li>    
+            <li>Estudiantes y profesionales que buscan especializarse en el manejo de servidores y bases de datos.</li>    
+            <li>Emprendedores y freelancers que quieren crear aplicaciones web completas y dinámicas.</li>   
+        </ul></h6>
+        <h6><strong>Requisitos previos</strong>
+            <ul>
+                <li>Conocimientos básicos de programación (variables, loops, funciones).</li> 
+                <li>Familiaridad con tecnologías front-end como HTML y JavaScript (recomendado, pero no obligatorio).</li>    
+                <li>Ganas de aprender y resolver problemas técnicos.</li>    
+                <li>Este curso es tu entrada al mundo del desarrollo back-end, ideal tanto para principiantes como para quienes desean avanzar al siguiente nivel en su carrera.</li>   
+                <li>¡Aprenderás a construir la infraestructura que hace funcionar la web moderna! 🌐</li> 
+            </ul></h6>        
+        </div>
+          </div>
+
+          <script src="/JS/hamburger-menu.js"></script>
+          <script src="/JS/navbar-menu.js"></script>
+          <script>
+            const menuStructure = {
+                main: `
+                    
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li class="separator"></li>
+                        <li><a href="#" class="bold">Explorar cursos</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('development')" class="with-arrow">Desarrollo <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('design')" class="with-arrow">Diseño <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('marketing')" class="with-arrow">Marketing <span class="arrow">→</span></a></li>
+                        <li><a href="#" onclick="toggleSubMenu('business')" class="with-arrow">Negocios <span class="arrow">→</span></a></li>
+                        <li class="separator"></li>
+                        <li><a href="/PAGES/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="/PAGES/IniciarSesion.html">Iniciar Sesión</a></li>
+                        <li><a href="/PAGES/Registrarse.html">Registrarme</a></li>
+                    </ul>
+                `,
+                explore: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Explorar cursos</div>
+                    <ul>
+                        <li><a href="#" onclick="toggleSubMenu('development')">Desarrollo</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('design')">Diseño</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('marketing')">Marketing</a></li>
+                        <li><a href="#" onclick="toggleSubMenu('business')">Negocios</a></li>
+                    </ul>
+                `,
+                development: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Desarrollo</div>
+                    <ul>
+                        <li><a href="/cursos/web">Desarrollo Web</a></li>
+                        <li><a href="/cursos/mobile">Desarrollo Móvil</a></li>
+                        <li><a href="/cursos/javascript">JavaScript</a></li>
+                    </ul>
+                `,
+                design: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Diseño</div>
+                    <ul>
+                        <li><a href="/cursos/ux-ui">UX/UI Design</a></li>
+                        <li><a href="/cursos/graphic-design">Diseño Gráfico</a></li>
+                    </ul>
+                `,
+                marketing: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Marketing</div>
+                    <ul>
+                        <li><a href="/cursos/digital-marketing">Marketing Digital</a></li>
+                        <li><a href="/cursos/social-media">Social Media</a></li>
+                    </ul>
+                `,
+                business: `
+                    <button class="back-btn" onclick="showMainMenu()">← Volver</button>
+                    <div class="explore-title">Negocios</div>
+                    <ul>
+                        <li><a href="/cursos/entrepreneurship">Emprendimiento</a></li>
+                        <li><a href="/cursos/finance">Finanzas</a></li>
+                    </ul>
+                `
+            };
+            
+            function toggleMenu() {
+                const menuIcon = document.querySelector('.menuIcon');
+                const navbarMobile = document.querySelector('.navbarMobile');
+                const overlay = document.querySelector('.overlay');
+                
+                menuIcon.classList.toggle('active');
+                navbarMobile.classList.toggle('active');
+                overlay.classList.toggle('active');
+            
+                if (navbarMobile.classList.contains('active')) {
+                    showMainMenu();
+                }
+            }
+            
+            function toggleSubMenu(menuType) {
+                const navbarMobile = document.querySelector('.navbarMobile');
+                navbarMobile.innerHTML = menuStructure[menuType] || menuStructure.main;
+            }
+            
+            function showMainMenu() {
+                toggleSubMenu('main');
+            }
+            
+            
+                    </script>
 </body>
 </html>

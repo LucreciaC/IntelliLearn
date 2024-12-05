@@ -11,14 +11,38 @@
     z-index: 2;
 }
 .navbar {
-    height: 100px;
-    background-color: #ffeab6;
-    display: flex;
-    align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: center; /* Centramos horizontalmente el contenido */
-    padding: 0 20px;
-    box-sizing: border-box;
+  height: 100px;
+  background-color: rgba(235, 217, 172, 1);
+  display: flex;
+  align-items: center; /* Centramos verticalmente los elementos */
+  justify-content: center; /* Centramos horizontalmente el contenido */
+  padding: 0 20px;
+  box-sizing: border-box;
   }
+
+  
+
+  .header .navbar  .icons {
+    display: flex;
+    align-items: center;
+}
+.header .navbar  .icons i {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f8d77d;
+    padding: 10px;
+    border-radius: 30%;
+}
+.header .navbar  .icons .fa-envelope {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-cog {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.header .navbar  .icons .fa-user-circle {
+    background-color: rgba(226, 172, 72, 0.8);
+}
   
   /* Logo */
   .navbar-logo {
@@ -168,4 +192,35 @@
 /* Ajustes de flechas para multinivel */
 .dropdown-menu li:hover .arrow i {
   transform: rotate(180deg);
+}
+
+.uni{
+  width: 10%;
+}
+
+button {
+  background-color: #A7C5C5; /* Color base de tu portafolio */
+  color: black; 
+  border: none; 
+  padding: 12px 52px; 
+  font-size: 16px; 
+  font-family: 'Arial', sans-serif; 
+  border-radius: 10px !important; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+button:hover {
+  background-color: #8FA7A7; 
+  transform: scale(1.05); 
+}
+
+button:active {
+  transform: scale(0.98); 
+  background-color: #8FA7A7; 
 }
