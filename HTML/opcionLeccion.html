@@ -12,167 +12,116 @@
                  font-family: 'Roboto', sans-serif;
              }
        </style>
-    <title>Document</title>
+    <title>Agregar lecciones</title>
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-gray-100">
-    <div class="flex">
-     <!-- Sidebar -->
-     <div class="w-1/4 bg-white h-screen p-4">
-      <div class="flex items-center mb-6">
-       
-        <div class="navbar-logo">
-            <a href="/Index.html">
-                <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
-            </a>
+    <div class="flex flex-col lg:flex-row">
+      <!-- Sidebar -->
+      <div class="w-full lg:w-1/4 bg-white h-screen p-4">
+        <div class="flex items-center mb-6">
+            <div class="navbar-logo">
+                <a href="/Index.html">
+                    <img alt="Logo" class="w-30" src="/ASSETS/Images/Logo.png"/>
+                </a>
+              </div>              
+        </div>
+        <div class="mb-4">
+          <h2 class="text-gray-500 text-sm">Formato del producto:</h2>
+          <h1 class="text-lg font-bold">Curso Online</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="mb-2">
+              <a class="flex items-center text-blue-600" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Formato</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-blue-600" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Informaciones</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Precificación</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Contenido</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Página de ventas</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Informaciones personales</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a class="flex items-center text-gray-500" href="#">
+                <i class="fas fa-circle text-xs mr-2"></i>
+                <span>Términos y Políticas</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="w-full lg:w-3/4 p-8">
+        <div class="bg-yellow-100 p-6 rounded-lg shadow-md">
+          <h1 class="text-2xl font-bold mb-4">Informaciones básicas</h1>
+          <p class="text-gray-600 mb-6">
+            Los siguientes datos son muy importantes para tu producto. Rellénalos con atención.
+          </p>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="product-name">Nombre del producto</label>
+            <input class="w-full p-2 border border-gray-300 rounded" id="product-name" type="text" value="Diseño Web" />
+            <p class="text-gray-500 text-sm mt-1">Este nombre será exhibido en todos los frentes de Hotmart.</p>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="description">Descripción</label>
+            <textarea class="w-full p-2 border border-gray-300 rounded h-32" id="description">Descubre cómo diseñar sitios web atractivos, funcionales y centrados en el usuario. Este curso te enseñará las bases del diseño web moderno, combinando creatividad con herramientas técnicas para crear experiencias digitales memorables.</textarea>
+            <p class="text-gray-500 text-sm mt-1">Esta es la descripción de tu producto para tus compradores.</p>
+          </div>
+          <div class="flex flex-col lg:flex-row mb-4">
+            <div class="w-full lg:w-1/2 pr-2 mb-4 lg:mb-0">
+              <label class="block text-gray-700 font-bold mb-2" for="product-language">Idioma del producto</label>
+              <select class="w-full p-2 border border-gray-300 rounded" id="product-language">
+                <option>Español</option>
+              </select>
+              <p class="text-gray-500 text-sm mt-1">Exhibido en el momento de la compra.</p>
+            </div>
+            <div class="w-full lg:w-1/2 pl-2">
+              <label class="block text-gray-700 font-bold mb-2" for="main-country">Principal país de ventas</label>
+              <select class="w-full p-2 border border-gray-300 rounded" id="main-country">
+                <option>México</option>
+              </select>
+              <p class="text-gray-500 text-sm mt-1">También podrás vender en otros países.</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="product-image">Imagen de tu producto</label>
+            <input class="w-full p-2 border border-gray-300 rounded" id="product-image" placeholder="Sube una imagen" type="text" />
+          </div>
+          <div class="flex justify-between">
+            <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">Anterior</button>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Próximo</button>
+          </div>
         </div>
       </div>
-      <div class="mb-4">
-       <h2 class="text-gray-500 text-sm">
-        Formato del producto:
-       </h2>
-       <h1 class="text-lg font-bold">
-        Curso Online
-       </h1>
-      </div>
-      <nav>
-       <ul>
-        <li class="mb-2">
-         <a class="flex items-center text-blue-600" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Formato
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-blue-600" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Informaciones
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-gray-500" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Precificación
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-gray-500" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Contenido
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-gray-500" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Página de ventas
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-gray-500" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Informaciones personales
-          </span>
-         </a>
-        </li>
-        <li class="mb-2">
-         <a class="flex items-center text-gray-500" href="#">
-          <i class="fas fa-circle text-xs mr-2">
-          </i>
-          <span>
-           Términos y Políticas
-          </span>
-         </a>
-        </li>
-       </ul>
-      </nav>
-     </div>
-     <!-- Main Content -->
-     <div class="w-3/4 p-8">
-      <div class="bg-yellow-100 p-6 rounded-lg shadow-md">
-       <h1 class="text-2xl font-bold mb-4">
-        Informaciones básicas
-       </h1>
-       <p class="text-gray-600 mb-6">
-        Los siguientes datos son muy importantes para tu producto. Rellénalos con atención.
-       </p>
-       <div class="mb-4">
-        <label class="block text-gray-700 font-bold mb-2" for="product-name">
-         Nombre del producto
-        </label>
-        <input class="w-full p-2 border border-gray-300 rounded" id="product-name" type="text" value="Producto demo"/>
-        <p class="text-gray-500 text-sm mt-1">
-         Este nombre será exhibido en todos los frentes de Hotmart.
-        </p>
-       </div>
-       <div class="mb-4">
-        <label class="block text-gray-700 font-bold mb-2" for="description">
-         Descripción
-        </label>
-        <textarea class="w-full p-2 border border-gray-300 rounded h-32" id="description">parturient lacinia, habitasse fermentum hac varius semper lectus curabitur et, dapibus purus eros cum platea faucibus suspendisse. Molestie velit vehicula sociis malesuada interdum venenatis dapibus, nam convallis purus imperdiet nascetur nunc eget euismod. Iacus pharetra pulvinar potenti erat volutpat. Primis et dui magna nascetur hac suspendisse, venenatis arcu massa bibendum eros posuere, per libero scelerisque taciti praesent.</textarea>
-        <p class="text-gray-500 text-sm mt-1">
-         Esta es la descripción de tu producto para tus compradores.
-        </p>
-       </div>
-       <div class="flex mb-4">
-        <div class="w-1/2 pr-2">
-         <label class="block text-gray-700 font-bold mb-2" for="product-language">
-          Idioma del producto
-         </label>
-         <select class="w-full p-2 border border-gray-300 rounded" id="product-language">
-          <option>
-           Español
-          </option>
-         </select>
-         <p class="text-gray-500 text-sm mt-1">
-          Exhibido en el momento de la compra.
-         </p>
-        </div>
-        <div class="w-1/2 pl-2">
-         <label class="block text-gray-700 font-bold mb-2" for="main-country">
-          Principal país de ventas
-         </label>
-         <select class="w-full p-2 border border-gray-300 rounded" id="main-country">
-          <option>
-           México
-          </option>
-         </select>
-         <p class="text-gray-500 text-sm mt-1">
-          También podrás vender en otros países.
-         </p>
-        </div>
-       </div>
-       <div class="mb-4">
-        <label class="block text-gray-700 font-bold mb-2" for="product-image">
-         Imagen de tu producto
-        </label>
-        <input class="w-full p-2 border border-gray-300 rounded" id="product-image" placeholder="Sube una imagen" type="text"/>
-       </div>
-       <div class="flex justify-between">
-        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded">
-         Anterior
-        </button>
-        <button class="bg-blue-600 text-white px-4 py-2 rounded">
-         Próximo
-        </button>
-       </div>
-      </div>
-     </div>
     </div>
-   </body>
+  </body>
+  
 </html>
