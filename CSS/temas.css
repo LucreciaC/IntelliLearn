@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-.sidebar {
+.sidebar1 {
     width: 200px;
     background-color: #d4a73e;
     height: 100vh;
@@ -12,13 +12,14 @@ body {
     left: 0;
     padding-top: 20px;
     transition: transform 0.3s ease;
+    z-index: 1000;
 }
-.sidebar h2 {
+.sidebar1 h2 {
     color: #000;
     text-align: center;
     margin-bottom: 40px;
 }
-.sidebar a {
+.sidebar1 a {
     display: flex;
     align-items: center;
     color: #000;
@@ -26,18 +27,19 @@ body {
     text-decoration: none;
     font-size: 16px;
 }
-.sidebar a i {
+.sidebar1 a i {
     margin-right: 10px;
 }
-.sidebar a:hover {
+.sidebar1 a:hover {
     background-color: #c49b2e;
 }
-.sidebar hr {
+.sidebar1 hr {
     border: 0;
     height: 1px;
     background-color: #8b6f2e; /* Darker color for the separator */
     margin: 10px 0;
 }
+
 .content {
     margin-left: 200px;
     padding: 0;
@@ -52,7 +54,7 @@ body {
     top: 0;
     left: 200px;
     right: 0;
-    z-index: 1000;
+    z-index: 1001;
 }
 .header h1 {
     margin: 0;
@@ -76,8 +78,8 @@ body {
 .dropdown {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 48px;
+    right: -20px;
     background-color: #f0d78c;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1001;
@@ -125,13 +127,16 @@ body {
 .profiles-link:hover {
     text-decoration: underline; /* Subrayar al pasar el mouse */
 }
+
 .main-content {
+    display: flex;
+    flex-direction: column; 
     margin-top: 80px; /* Adjusted to account for the header */
     padding: 20px;
 }
 .main-content h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    color: #000; /* Asegúrate de que el color sea visible */
 }
 .course-material {
     display: flex;
@@ -144,8 +149,6 @@ body {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     border-radius: 8px; /* Made corners a bit round */
 }
 .course-material button i {
@@ -155,7 +158,7 @@ body {
     background-color: #3a4a5a;
 }
 .program {
-    background-color: #2e3b4e;
+   
     padding: 20px;
     border-radius: 8px;
 }
@@ -209,41 +212,162 @@ body {
     color: #fff;
 }
 
-.chat-sidebar {
+.sidebar {
     position: fixed;
+    right: 0;
     top: 0;
-    left: 0;
     width: 300px;
-    height: 100%;
+    height: 95%;
     background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     z-index: 1001;
     transform: translateX(-100%);
+=======
+    z-index: 1006;
+>>>>>>> topics
     transition: transform 0.3s ease;
 }
-.chat-sidebar.active {
-    transform: translateX(0);
+.sidebar.hidden {
+    transform: translateX(100%);
 }
-.chat-sidebar .close-btn {
+.sidebar .close-btn {
     align-self: flex-end;
     font-size: 20px;
     cursor: pointer;
 }
-.chat-input {
+.sidebar .contacts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar .contacts-header h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 50px;
+}
+.sidebar .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar .search-bar input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sidebar .search-bar .search-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #666;
+}
+.sidebar .contact-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.sidebar .contact-list .contact-group {
+    margin-bottom: 20px;
+}
+.sidebar .contact-list .contact-group h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.sidebar .contact-list .contact-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.sidebar .contact-list .contact-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sidebar .contact-list .contact-item .contact-name {
+    font-size: 14px;
+}
+.privacy-settings, .chat-settings {
+    display: none;
+    flex-direction: column;
+}
+.privacy-settings h2, .chat-settings h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.privacy-settings p, .chat-settings p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.estadoConexion{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.profilePic{
+    border-radius: 50%;
+}
+
+.privacy-settings .option, .chat-settings .option {
+    margin-bottom: 10px;
+}
+.back-btn {
+    background-color: #ff3366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.back-btn:hover {
+    background-color: #e62e5c;
+}
+.back-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+.back-arrow-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.back-arrow-container h2 {
+    margin-left: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.chat-window {
+    display: none;
+    flex-direction: column;
+}
+
+ .chat-input {
     display: flex;
     align-items: center;
     margin-top: auto;
 }
-.chat-input input {
+ .chat-input input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.chat-input .send-btn {
+ .chat-input .send-btn {
     margin-left: 10px;
     padding: 10px 10px;
     background-color: #ff3366;
@@ -252,27 +376,348 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-.chat-input .send-btn:hover {
+ .chat-input .send-btn:hover {
     background-color: #e62e5c;
 }
-.contact-item {
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.chat-settings {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative; /* Necesario para posicionar el menú */
+}
+
+.chat-options {
+    cursor: pointer;
+}
+#chat-options {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1001; /* Asegúrate de que esté encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#chat-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#chat-options li {
     padding: 10px;
     cursor: pointer;
 }
-.contact-item:hover {
-    background-color: #f0f0f0;
+#chat-options li:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
 }
-.contact-name {
-    margin-left: 10px;
+
+
+.settings-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #FFEAB6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px;
+    z-index: 1;
+    right: 40px;
+    top: 75px;
 }
-.privacy-settings, .chat-settings {
+.settings-dropdown a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+.settings-dropdown a:hover {
+    text-decoration: underline;
+}
+.hidden {
+    display: none; /* Oculta el elemento */
+}
+
+.notifications {
+    background-color: #f0d78c;
+    border: 1px solid #f0d78c;
+    position: fixed;
+    right: 0px; /* Ajusta según sea necesario */
+    top: 80px; /* Ajusta según sea necesario */
+    width: 250px; /* Ajusta según sea necesario */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1003;
     display: none; /* Oculto por defecto */
+    border-radius: 3px; /* Esquinas redondeadas */
 }
+
+.notifications ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.notifications li {
+    padding: 5px 0;
+}
+
+.notifications h3 {
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 10px 0; /* Espaciado vertical opcional */
+}
+
+
+.notifications.visible {
+    display: block; /* Muestra el menú cuando tiene la clase visible */
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    color: #000000;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.content h2 {
+    margin-top: 40px;
+    font-size: 20px;
+}
+.content h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #A0A0A0;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.main-content1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.left, .right {
+    flex: 1; /* Ambas columnas ocupan un ancho igual */
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+.modal .left {
+   color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd; /* Línea divisoria */
+}
+.modal .right {
+    color: white;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Contenido dentro de las columnas */
+.modal .upload-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal .message textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    resize: none;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.message, .progress-item {
+    background-color: #2E2E3E;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.message p, .progress-item p {
+    margin: 5px 0;
+}
+.message strong {
+    color: #F5D88E;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.actions i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.actions button {
+    background-color: #A7C5C5;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.actions button:hover {
+    background-color: #95B0B0;
+    transform: translateY(-2px);
+}
+.actions button:active {
+    background-color: #7A9A9A;
+    transform: translateY(0);
+}
+textarea {
+    width: 90%;
+    background-color: #2E2E3E;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+textarea:focus {
+    outline: none;
+}
+.upload-section {
+    background-color: #2E2E3E;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.upload-section input[type="file"] {
+    display: none;
+}
+.upload-section label {
+    background-color: #A7C5C5;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.upload-section label:hover {
+    background-color: #95B0B0;
+    transform: translateY(-2px);
+}
+.upload-section label:active {
+    background-color: #7A9A9A;
+    transform: translateY(0);
+}
+.upload-section p {
+    margin: 10px 0 0 0;
+}
+.hidden {
+    display: none; /* This will hide elements with this class */
+}
+
+/* Fondo gris (overlay) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo gris semi-transparente */
+    display: none; /* Ocultar inicialmente */
+    z-index: 1000; /* Asegura que el overlay esté encima del contenido */
+}
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%; /* Ancho adaptable */
+    max-width: 900px; /* Ancho máximo */
+    z-index: 1001;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Asegura una disposición vertical para el contenido */
+}
+
+/* Estilos específicos para el contenido dentro del modal */
+.modal .main-content {
+    display: flex; /* Activa Flexbox */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    justify-content: space-between; /* Separa las columnas */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+ 
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        height: auto;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .actions button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    .sidebar {
+    .sidebar1 {
         transform: translateX(-100%);
         position: fixed;
         top: 0;
@@ -281,7 +726,7 @@ body {
         height: 100%;
         z-index: 1000;
     }
-    .sidebar.active {
+    .sidebar1.active {
         transform: translateX(0);
     }
     .content {
@@ -297,16 +742,16 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .sidebar {
+    .sidebar1 {
         transform: translateX(-100%);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1000;
+        z-index: 1006;
     }
-    .sidebar.active {
+    .sidebar1.active {
         transform: translateX(0);
     }
     .hamburger {
@@ -401,4 +846,42 @@ body {
         order: -1; /* Move status icon to the top */
         align-self: flex-end; /* Align status icon to the right */
     }
+
+    .modal {
+        top: 60%;
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar1 {
+        transform: translateX(-100%); /* Ocultar inicialmente */
+        transition: transform 0.3s ease; /* Transición suave */
+        z-index: 1006;
+    }
+    
+    .sidebar1.active {
+        transform: translateX(0); /* Mostrar el sidebar */
+    }
+
+    .modal {
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 90%; /* Adaptable para móviles */
+        max-width: 600px; /* Ancho máximo */
+        max-height: 80%; /* Altura máxima para evitar desbordamiento */
+        overflow-y: auto; /* Permitir desplazamiento si el contenido es demasiado largo */
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        display: flex;
+        flex-direction: column; /* Asegura una disposición vertical para el contenido */
+    }
+
 }
