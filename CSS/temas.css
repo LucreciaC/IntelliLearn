@@ -1,0 +1,404 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.sidebar {
+    width: 200px;
+    background-color: #d4a73e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+}
+.sidebar h2 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.sidebar a i {
+    margin-right: 10px;
+}
+.sidebar a:hover {
+    background-color: #c49b2e;
+}
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #8b6f2e; /* Darker color for the separator */
+    margin: 10px 0;
+}
+.content {
+    margin-left: 200px;
+    padding: 0;
+}
+.header {
+    background-color: #f0d78c;
+    padding: 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    z-index: 1000;
+}
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header .navbar .icons {
+    display: flex;
+    align-items: center;
+}
+.header .navbar .icons i {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #000;
+    background-color: #f8d77d;
+    padding: 10px;
+    border-radius: 30%;
+}
+.header .navbar .icons .fa-user-circle {
+    background-color: rgba(226, 172, 72, 0.8);
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #f0d78c;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dropdown a {
+    display: block;
+    padding: 12px 16px;
+    color: #000;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #f0f0f0;
+}
+.dropdown .user-info {
+    display: flex;
+    align-items: center;
+}
+.dropdown .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.dropdown .user-info p {
+    margin: 0;
+}
+.dropdown .separator {
+    height: 1px;
+    border-top: 1px solid #000;
+    margin: 10px 0;
+}
+.profiles-link {
+    text-align: center;
+    margin-top: -20px;
+    color: blue;
+    transition: text-decoration 0.3s ease; /* Transición suave para el efecto */
+}
+ /* Asegúrate de que el color azul se aplique a profiles-link */
+ .user-menu .dropdown .profiles-link {
+    color: #1D4ED8; /* Asegúrate de que el color azul se aplique */
+}
+
+.profiles-link:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+.main-content {
+    margin-top: 80px; /* Adjusted to account for the header */
+    padding: 20px;
+}
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.course-material {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px; /* Moved it higher */
+}
+.course-material button {
+    background-color: #4a5a6a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 8px; /* Made corners a bit round */
+}
+.course-material button i {
+    margin-right: 10px;
+}
+.course-material button:hover {
+    background-color: #3a4a5a;
+}
+.program {
+    background-color: #2e3b4e;
+    padding: 20px;
+    border-radius: 8px;
+}
+.program-item {
+    background-color: #3a4a5a;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.program-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    flex: 1;
+}
+.program-item .details {
+    display: flex;
+    align-items: center;
+}
+.program-item .details button {
+    background-color: #4a5a6a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.program-item .details button i {
+    margin-right: 5px;
+}
+.program-item .details button:hover {
+    background-color: #3a4a5a;
+}
+.program-item .details .icon {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+}
+.program-item .status {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Added margin to align with text */
+}
+.program-item .status .icon {
+    font-size: 18px;
+    color: #fff;
+}
+
+.chat-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.chat-sidebar.active {
+    transform: translateX(0);
+}
+.chat-sidebar .close-btn {
+    align-self: flex-end;
+    font-size: 20px;
+    cursor: pointer;
+}
+.chat-input {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.chat-input .send-btn {
+    margin-left: 10px;
+    padding: 10px 10px;
+    background-color: #ff3366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.chat-input .send-btn:hover {
+    background-color: #e62e5c;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.contact-item:hover {
+    background-color: #f0f0f0;
+}
+.contact-name {
+    margin-left: 10px;
+}
+.privacy-settings, .chat-settings {
+    display: none; /* Oculto por defecto */
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .content {
+        margin-left: 0;
+    }
+    .header {
+        left: 0;
+        right: 0;
+        padding: 20px;
+        justify-content: center;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 30px; /* Moved a bit lower */
+        left: 20px;
+        z-index: 1100;
+        cursor: pointer;
+        width: 30px;
+        height: 24px;
+        position: relative;
+    }
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3.5px;
+        background-color: #000;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        position: absolute;
+    }
+    .hamburger span:nth-child(1) {
+        transform: translateY(-8px);
+    }
+    .hamburger span:nth-child(3) {
+        transform: translateY(8px);
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    .content {
+        margin-left: 0;
+    }
+    .header {
+        left: 0;
+        right: 0;
+        padding: 20px; /* Increased padding for thicker header */
+        justify-content: center; /* Center the content */
+    }
+    .header h1 {
+        font-size: 20px;
+        text-align: center; /* Center the text */
+    }
+    .header .navbar .icons {
+        position: absolute;
+        right: 20px; /* Position the icons to the right */
+        top: 10px; /* Move the icons higher */
+    }
+    .main-content {
+        margin-top: 80px; /* Adjusted to account for the thicker header */
+        padding: 10px;
+    }
+    .main-content h2 {
+        font-size: 20px;
+    }
+    .course-material button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .program {
+        padding: 10px;
+    }
+    .program-item {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .program-item h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .program-item .details {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .program-item .details button {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .program-item .details .icon {
+        font-size: 16px;
+    }
+    .program-item .status {
+        margin-bottom: 10px; /* Added margin to separate status icon */
+        order: -1; /* Move status icon to the top */
+        align-self: flex-end; /* Align status icon to the right */
+    }
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi aprendizaje</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/CSS/lecciones.css" />
+    <link rel="icon" href="/ASSETS/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <header class="header">
+            <div class="navbar">
+                <div class="menuIcon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="navbar-logo">
+                    <a href="/Index.html">
+                        <img alt="Logo" class="logo" src="/ASSETS/Images/Logo.png"/>
+                    </a>
+                </div>
+                <ul class="navbar-menu">
+                    <li>
+                        <a class="dropdown-toggle" href="#">
+                            Explorar cursos
+                            <span class="arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    Desarrollo
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                                  <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                                  <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Diseño
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                                  <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                                  <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Marketing
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                                  <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                                  <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Negocios
+                                    <span class="arrow-right">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-dropdown-menu">
+                                  <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                                  <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                                  <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="icons">
+                    <i class="fas fa-envelope" onclick="toggleSidebar()"></i>
+                    <i class="fas fa-cog" onclick="toggleSettingsDropdown()"></i>
+                    
+                    <div class="user-menu">
+                        <i class="fas fa-user-circle" onclick="toggleDropdown()"></i>
+                        <div class="dropdown" id="userDropdown">
+                            <a href="#">
+                                <div class="user-info">
+                                    <img alt="User  Avatar" src="https://storage.googleapis.com/a1aa/image/aGdxFrvDw75dM9vg1X3pPs8Cz4UULEBUagpCGyZnooxWAw7E.jpg"/>
+                                    <p class="userName">Nombre Completo</p>
+                                </div>
+                            </a>
+                            <a class="profiles-link" href="#">
+                                Ver perfil
+                            </a>
+                            <div class="separator"></div>
+                            <a href="#">
+                                <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+
+            <div class="settings-dropdown" id="settings-dropdown">
+                <a href="#">Cambio de contraseña</a>
+                <a href="#">Eliminar o desactivar la cuenta</a>
+                <a href="#">Ayuda</a>
+            </div>
+
+            
+
+
+
+            <div class="overlay" id="overlay" onclick="toggleMenu()">
+                <button class="close-btn" onclick="toggleMenu()">&times;</button>
+            </div>
+            <div class="navbarMobile" id="navbarMobile">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <div class="separator"></div>
+                    <div class="explore-title">Explorar cursos</div>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('desarrollo')">Desarrollo<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('diseno')">Diseño<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('marketing')">Marketing<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <li><a class="dropdown-toggle" href="#" onclick="showSubMenu('negocios')">Negocios<span class="arrow-right"><i class="fas fa-chevron-right"></i></span></a></li>
+                    <div class="separator"></div>
+                    <li><a href="/HTML/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="/HTML/IniciarSesion.html">Iniciar Sesión</a></li>
+                    <li><a href="/HTML/Registrarse.html">Registrarme</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="desarrollo" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/desarrolloFrontend.html">Frontend</a></li>
+                    <li><a href="/HTML/desarrolloBackend.html">Backend</a></li>
+                    <li><a href="/HTML/desarrolloFullStack.html">Full Stack</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="diseno" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/diseñoDiseñoWeb.html">Diseño Web</a></li>
+                    <li><a href="/HTML/diseñoWordPress.html">WordPress</a></li>
+                    <li><a href="/HTML/diseñoPixelArt.html">Pixel Art</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="marketing" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/marketingMarketingDigital.html">Marketing Digital</a></li>
+                    <li><a href="/HTML/marketingYoutubeMarketing.html">Youtube Marketing</a></li>
+                    <li><a href="/HTML/marketingEstrategiasMarketing.html">Estrategias de Marketing</a></li>
+                </ul>
+            </div>
+            <div class="navbarMobile" id="negocios" style="display: none;">
+                <button class="back-btn" onclick="showMainMenu()">&larr; Volver</button>
+                <ul>
+                    <li><a href="/HTML/negociosFreelancing.html">Freelancing</a></li>
+                    <li><a href="/HTML/negociosLiderazgo.html">Liderazgo</a></li>
+                    <li><a href="/HTML/negociosEstrategiasNegocios.html">Estrategias de Negocios</a></li>
+                </ul>
+            </div>
+            
+        </header>
+       <div class="breadcrumb">
+        <a href="/Index.html">
+         <i class="fas fa-home"></i>
+        </a>
+        &gt;
+        <a href="#">
+         Cuenta Personal
+        </a>
+        &gt;
+        <a href="#">
+         Mis lecciones
+        </a>
+       </div>
+       <div class="content">
+        <h1>
+         Mi aprendizaje
+        </h1>
+        <div class="courses">
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Desarrollo Front End" src="https://storage.googleapis.com/a1aa/image/o8Pv69pY1L6BEdUul6Cv0IF9ZWs4sdXnRWtJZ1UUHGELPq7E.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Desarrollo Front-End</h2>
+                    <p>Aprende HTML, CSS y JavaScript</p>
+                    <p>Comienza tu viaje en el desarrollo web</p>
+                    <p class="status">En curso</p>
+                </div>
+            </a>
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Digital Marketing Fundamentals" src="https://storage.googleapis.com/a1aa/image/aZtn7CGQ6BqVOFowWYnJJfebOeg2xFhG8rwQwMRySLQb5RdnA.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Digital Marketing Fundamentals</h2>
+                    <p>Master online marketing tactics</p>
+                    <p>Boost your digital presence</p>
+                </div>
+            </a>
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Data Science for Beginners" src="https://storage.googleapis.com/a1aa/image/aYZPeaybLtyKQaveCzIBOzDWvb5JdoXfKsVUniTpliOfyj6OB.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Data Science for Beginners</h2>
+                    <p>Introduction to data analytics</p>
+                    <p>Explore the world of data</p>
+                </div>
+            </a>
+            <!-- Repite para los demás cursos -->
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Web Development 101" src="https://storage.googleapis.com/a1aa/image/o8Pv69pY1L6BEdUul6Cv0IF9ZWs4sdXnRWtJZ1UUHGELPq7E.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Web Development 101</h2>
+                    <p>Learn HTML, CSS, and JavaScript</p>
+                    <p>Start your journey in web development</p>
+                    <p class="status">En curso</p>
+                </div>
+            </a>
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Digital Marketing Fundamentals" src="https://storage.googleapis.com/a1aa/image/aZtn7CGQ6BqVOFowWYnJJfebOeg2xFhG8rwQwMRySLQb5RdnA.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Digital Marketing Fundamentals</h2>
+                    <p>Master online marketing tactics</p>
+                    <p>Boost your digital presence</p>
+                </div>
+            </a>
+            <a href="/HTML/Temas.html" class="course-card">
+                <img alt="Data Science for Beginners" src="https://storage.googleapis.com/a1aa/image/aYZPeaybLtyKQaveCzIBOzDWvb5JdoXfKsVUniTpliOfyj6OB.jpg"/>
+                <div class="separator"></div>
+                <div>
+                    <h2>Data Science for Beginners</h2>
+                    <p>Introduction to data analytics</p>
+                    <p>Explore the world of data</p>
+                </div>
+            </a>
+        </div>
+
+       <div class="sidebar hidden" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+         ×
+        </div>
+        <div class="contacts-header">
+         <h2>
+          Contactos
+         </h2>
+         <i class="fas fa-cog icon" id="settings-icon" onclick="toggleMessageSettings()">
+         </i>
+        </div>
+        <div class="search-bar" id="search-bar">
+         <input placeholder="Búsqueda" type="text"/>
+         <i class="fas fa-search search-icon">
+         </i>
+        </div>
+        <div class="contact-list" id="contact-list">
+         <div class="contact-group">
+          <h3>
+           Destacados (1)
+          </h3>
+          <div class="contact-item" onclick="openChat()">
+           <img  alt="Profile picture of Lucrecia Concatti" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg" width="40"/>
+           <div class="contact-name">
+            Lucrecia Concatti
+           </div>
+          </div>
+         </div>
+         <div class="contact-group">
+          <h3>
+           Grupo (0)
+          </h3>
+         </div>
+         <div class="contact-group">
+          <h3>
+           Privado (0)
+          </h3>
+         </div>
+        </div>
+        <div class="privacy-settings" id="privacy-settings">
+         <div class="back-arrow-container">
+          <i class="fas fa-arrow-left back-arrow" onclick="toggleMessageSettings()">
+          </i>
+          <h2>
+           Configuración
+          </h2>
+         </div>
+         <h2>
+          Privacidad
+         </h2>
+         <p>
+          Puedes restringir quién puede enviarte mensajes:
+         </p>
+         <div class="option">
+          <input id="everyone" name="privacy" type="radio" value="everyone"/>
+          <label for="everyone">
+           Todos
+          </label>
+         </div>
+         <div class="option">
+          <input id="contacts" name="privacy" type="radio" value="contacts"/>
+          <label for="contacts">
+           Solo contactos
+          </label>
+         </div>
+         <div class="option">
+          <input id="noone" name="privacy" type="radio" value="noone"/>
+          <label for="noone">
+           Nadie
+          </label>
+         </div>
+        </div>
+        <div class="chat-settings" id="chat-settings">
+         <div class="back-arrow-container">
+          <div style="display: flex; align-items: center;">
+           <i class="fas fa-arrow-left back-arrow" onclick="toggleChatSettings()">
+           </i>
+           <img class="profilePic" alt="Profile picture of Lucrecia Concatti" class="chat-profile-pic" height="40" src="https://storage.googleapis.com/a1aa/image/eJUPuJLZq3ShXK03Ns0M3RpYUd4Ln2DFw0ewrf8wuGXl0gdnA.jpg" width="40"/>
+           <div class="chat-name">
+            <h2>
+             Lucrecia Concatti
+            </h2>
+            <p class="estadoConexion">
+             En línea
+            </p>
+           </div>
+          </div>
+          <div class="chat-options-icon" onclick="showChatOptions(event)">
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+         </div>
+         <div class="separator">
+         </div>
+         <div class="chat-messages" id="chat-messages">
+          <!-- Chat messages will go here -->
+         </div>
+         <div class="chat-input">
+          <input placeholder="Escribe un mensaje..." type="text"/>
+          <button class="send-btn">
+           Enviar
+          </button>
+         </div>
+        </div>
+        <div class="chat-options" id="chat-options" >
+            <ul>
+                <li onclick="deleteConversation()">Eliminar conversación</li>
+                <li onclick="toggleChatSettings()">Configuración</li>
+            </ul>
+        </div>
+       </div>
+       <script src="/JS/hamburger-menu.js"></script>
+       <script src="/JS/sidebar.js"></script>
+</body>
+</html>
