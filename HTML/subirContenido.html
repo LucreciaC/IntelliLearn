@@ -3,85 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/subirContenido.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Document</title>
 </head>
 <body class="bg-gray-100">
-    <div class="flex">
+    <div class="flex flex-col md:flex-row">
         <!-- Sidebar -->
-        <div class="w-1/5 bg-gray-200 h-screen p-4">
+        <div class="w-full md:w-1/5 bg-gray-200 md:h-screen p-4 hidden md:block">
             <div class="text-lg font-bold mb-4">MIS MATERIALES</div>
             <div class="text-red-500 mb-2">Mis lecciones</div>
             <div>Reportes</div>
         </div>
-        
+
         <!-- Main Content -->
-        <div class="w-4/5">
+        <div class="w-full md:w-4/5">
             <!-- Header -->
             <div class="bg-yellow-200 p-4 flex justify-between items-center">
-                <div class="text-2xl font-bold flex items-center">
-                    <i class="fas fa-graduation-cap mr-2"></i>
-                    IntelliLearn
+                <div class="navbar-logo flex-shrink-0">
+                    <a href="/Index.html">
+                        <img alt="Logo" class="logo h-12 md:h-16" src="/ASSETS/Images/Logo.png" />
+                    </a>
                 </div>
-                <div class="flex space-x-4">
-                    <i class="fas fa-comment-dots text-2xl"></i>
-                    <i class="fas fa-cog text-2xl"></i>
-                    <i class="fas fa-user-circle text-2xl"></i>
-                </div>
+                <!-- Hamburger Menu -->
+                <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-700" id="menuToggle">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            
+
+            <!-- Dropdown Sidebar for Mobile -->
+            <div id="mobileSidebar" class="hidden bg-gray-200 p-4">
+                <div class="text-lg font-bold mb-4">MIS MATERIALES</div>
+                <div class="text-red-500 mb-2">Mis lecciones</div>
+                <div>Reportes</div>
+            </div>
+
             <!-- Content -->
-            <div class="p-4">
-                <div class="flex items-center mb-4">
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center">
-                        Crear
-                        <i class="fas fa-caret-down ml-2"></i>
-                    </button>
-                    <button class="bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded ml-2">+ Carpeta</button>
-                </div>
-                
-                <!-- Dropdown Menu -->
-                <div class="bg-white border rounded shadow-lg w-64">
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-book text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Lección</div>
-                            <div class="text-sm text-gray-500">Crea contenido, multimedia y actividades</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-video text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Video</div>
-                            <div class="text-sm text-gray-500">Combina video y preguntas</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-tasks text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Actividad</div>
-                            <div class="text-sm text-gray-500">Interactúe rápidamente con una actividad</div>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center">
-                        <i class="fas fa-file-powerpoint text-blue-500 mr-2"></i>
-                        <div>
-                            <div class="font-bold">Presentaciones de Google</div>
-                            <div class="text-sm text-gray-500">Crea lecciones en Google Slides</div>
-                        </div>
-                    </div>
-                </div>
-                
+<div class="p-4">
+    <div class="flex items-center mb-4">
+        <button id="createButton" class="bg-blue-500 text-white px-4 py-2 rounded flex items-center mt-1"> <!-- Ajusta el margen aquí -->
+            Crear
+            <i class="fas fa-caret-down ml-2"></i>
+        </button>
+        
+        <button class="bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded ml-2">+ Carpeta</button>
+    </div>
+    
+    <!-- Dropdown Menu -->
+    <div id="dropdownMenu" class="bg-white border rounded shadow-lg w-64 hidden">
+        <div class="p-2 flex items-center">
+            <i class="fas fa-book text-blue-500 mr-2"></i>
+            <div>
+                <div class="font-bold"><a href="/HTML/opcionLeccion.html">Lección</a></div>
+                <div class="text-sm text-gray-500">Crea contenido, multimedia y actividades</div>
+            </div>
+        </div>
+        <div class="p-2 flex items-center video-option">
+            <i class="fas fa-video text-blue-500 mr-2"></i>
+            <div>
+                <div class="font-bold">Video</div>
+                <div class="text-sm text-gray-500">Combina video y preguntas</div>
+            </div>
+        </div>
+        <div class="p-2 flex items-center">
+            <i class="fas fa-tasks text-blue-500 mr-2"></i>
+            <div>
+                <div class="font-bold">Actividad</div>
+                <div class="text-sm text-gray-500">Interactúe rápidamente con una actividad</div>
+            </div>
+        </div>
+        <div class="p-2 flex items-center">
+            <i class="fas fa-file-powerpoint text-blue-500 mr-2"></i>
+            <div>
+                <div class="font-bold">Presentaciones de Google</div>
+                <div class="text-sm text-gray-500">Crea lecciones en Google Slides</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Input de archivo oculto -->
+<input type="file" id="videoUpload" accept="video/*" class="hidden" />
+
+<script src="/JS/subirContenido.js"></script>
+
+
                 <!-- Main Section -->
                 <div class="mt-8">
                     <div class="border-2 border-dashed border-gray-300 p-8 text-center">
-                        <div class="text-blue-500 text-4xl">+</div>
-                        <div class="text-blue-500 text-xl">Crea una Lección</div>
+                        <div class="text-blue-500 text-4xl"><a href="/HTML/opcionLeccion.html">+</a></div>
+                        <div class="text-blue-500 text-xl"><a href="/HTML/opcionLeccion.html">Crea una Lección</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("menuToggle").addEventListener("click", function () {
+            const sidebar = document.getElementById("mobileSidebar");
+            sidebar.classList.toggle("hidden");
+        });
+
+        // Seleccionar los elementos
+const createButton = document.getElementById('createButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+// Función para mostrar/ocultar el menú desplegable
+createButton.addEventListener('click', (event) => {
+    // Prevenir que el evento de click se propague a document y cierre el menú inmediatamente
+    event.stopPropagation();
+    dropdownMenu.classList.toggle('show');
+});
+
+// Cierra el menú si se hace clic fuera de él
+document.addEventListener('click', (event) => {
+    if (!createButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+    }
+});
+
+
+    </script>
 </body>
+
+
+
 </html>
