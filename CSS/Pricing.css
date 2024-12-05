@@ -2,5 +2,17 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-
+/* Logo */
+.navbar-logo {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center; /* Alinea el logo verticalmente también */
+  }
+  
+  .navbar-logo .logo {
+    width: 249px;
+    height: 137px;
+    object-fit: cover;
+  }
   
