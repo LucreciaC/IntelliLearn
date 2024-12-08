@@ -223,12 +223,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    z-index: 1001;
-    transform: translateX(-100%);
-=======
     z-index: 1006;
->>>>>>> topics
     transition: transform 0.3s ease;
 }
 .sidebar.hidden {
