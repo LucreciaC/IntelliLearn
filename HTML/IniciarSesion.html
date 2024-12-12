@@ -22,20 +22,21 @@
                 <i class="fas fa-graduation-cap text-2xl mr-2"></i>
             </header>
             <h2 class="text-2xl font-bold mb-4">Inicio de sesión</h2>
-            <form>
+            <form method="POST" action="iniciarSesion.php">
                 <div class="input-group has-validation">
                     <div class="form-floating is-invalid">
-                      <input type="text" class="w-full p-2 mb-4 border rounded" id="floatingInputGroup2" placeholder="Username" required> 
+                      <input type="text" class="w-full p-2 mb-4 border rounded" id="floatingInputGroup2" name="NombreUsuario" placeholder="Nombre de Usuario" required> 
                       
                     </div>
                     
                   </div>
 
-                <input class="w-full p-2 mb-2 border rounded" placeholder="Contraseña" type="password" required />
+                <input class="w-full p-2 mb-2 border rounded" name="Contraseña" placeholder="Contraseña" type="password" required />
                 <div class="mb-4"></div> <!-- Espacio arriba -->
                 <a class="text-blue-600 text-sm block" href="http://localhost/Intellilearn/HTML/recuperarContraseña.html">¿Ha perdido su contraseña?</a>
                 <div class="mb-4"></div> <!-- Espacio abajo -->
                 <button class="w-fullb" type="submit">Inicio de Sesión</button>
+                <div id="loading" style="display: none;">Cargando...</div>
             </form>
             <div class="text-center mb-4">Inicia sesión usando:</div>
             <div class="flex justify-between mb-4">
@@ -54,7 +55,8 @@
                 ¿Es su primera vez aquí?
                 <a class="text-blue-600" href="http://localhost/Intellilearn/HTML/Registrarse.html">Regístrate haciendo click</a>
             </div>
-        </div>       
+        </div>  
+        <script src="http://localhost/Intellilearn/JS/inicioSesion.js"></script>     
 </body>
 
 
