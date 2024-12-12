@@ -3,7 +3,7 @@ document.getElementById('registroFormulario').addEventListener('submit', functio
 
     const formData = new FormData(this); // Crear un objeto FormData con los datos del formulario
 
-    fetch('guardar.php', { // Cambiar a la ruta de tu archivo PHP
+    fetch('http://localhost/Intellilearn/PHP/guardar.php', { // Cambiar a la ruta de tu archivo PHP
         method: 'POST',
         body: formData
     })

@@ -10,35 +10,35 @@
 <body>
   <div class="container my-5">
       <div class="text-center">
-          <a href="/Index.html">
-              <img alt="Logo" class="logo img-fluid mb-3" src="/ASSETS/Images/Logo.png"/>
+          <a href="http://localhost/Intellilearn/Index.html">
+              <img alt="Logo" class="logo img-fluid mb-3" src="http://localhost/Intellilearn/ASSETS/Images/Logo.png"/>
           </a>
       </div>
       <h2 class="text-center">Registrarse</h2>
       <form class="row g-3" id="registroFormulario">
           <div class="col-md-6">
-              <input type="text" class="form-control is-valid" placeholder="First Name" required />
+              <input type="text" class="form-control is-valid" name="Nombre" placeholder="Nombre" required />
           </div>
           <div class="col-md-6">
-              <input type="text" class="form-control is-valid" placeholder="Nombre de usuario" required />
+              <input type="text" class="form-control is-valid" name="NombreUsuario" placeholder="Nombre de usuario" required />
           </div>
           <div class="col-md-6">
-              <input type="email" class="form-control is-valid" placeholder="Correo Electrónico" required />
+              <input type="email" class="form-control is-valid" name="Email" placeholder="Correo Electrónico" required />
           </div>
           <div class="col-md-6">
-              <input type="password" class="form-control is-valid" placeholder="Contraseña" required />
+              <input type="password" class="form-control is-valid" name="Contraseña" placeholder="Contraseña" required />
           </div>
           <div class="col-md-6">
-              <input type="password" class="form-control is-valid" placeholder="Confirmar Contraseña" required />
+              <input type="password" class="form-control is-valid" name="ConfirmarContraseña" placeholder="Confirmar Contraseña" required />
           </div>
           <div class="col-md-12">
               <label>Seleccione su rol:</label><br />
               <div class="form-check form-check-inline">
-                  <input class="form-check-input" id="estudiante" name="role" type="radio" value="estudiante" />
+                  <input class="form-check-input" id="estudiante" name="rol" type="radio" value="estudiante" />
                   <label class="form-check-label" for="estudiante">Estudiante</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input" id="profesor" name="role" type="radio" value="profesor" />
+                  <input class="form-check-input" id="profesor" name="rol" type="radio" value="profesor" />
                   <label class="form-check-label" for="profesor">Profesor</label>
               </div>
           </div>
@@ -51,7 +51,7 @@
               </div>
           </div>
           <div class="col-12 text-center">
-              <button class="btn btn-primary" type="submit">Registrarme</button>
+              <button class="btn btn-primary" type="submit" id="signUpButton">Registrarme</button>
           </div>
       </form>
 
@@ -69,9 +69,10 @@
           </button>
       </div>
       <div class="text-center mt-4">
-          <p>¿Ya tienes cuenta? <a href="/HTML/IniciarSesion.html">Inicia Sesión aquí</a></p>
+          <p>¿Ya tienes cuenta? <a href="http://localhost/Intellilearn/HTML/IniciarSesion.html">Inicia Sesión aquí</a></p>
       </div>
   </div>
+  <script src="http://localhost/Intellilearn/JS/registroFormulario.js"></script>
 </body>
 
 </html>
