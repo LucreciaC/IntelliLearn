@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rol_numeric = $mapa_roles[$rol];
 
     // Cifrar la contraseña
-    $hashed_password = password_hash($contraseña, PASSWORD_DEFAULT);
+    $hashed_password = password_hash($contraseña, PASSWORD_BCRYPT);
 
     // Comprobar si el correo ya existe
     $checkEmail = "SELECT * FROM usuarios WHERE Email = ?";

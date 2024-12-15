@@ -1,27 +1,28 @@
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evitar el envío tradicional del formulario
+document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita el envío tradicional del formulario
 
-    // Mostrar el indicador de carga
+    const formData = new FormData(this); // Captura los datos del formulario
     const loadingIndicator = document.getElementById('loading');
-    loadingIndicator.style.display = 'block';
+    loadingIndicator.style.display = 'block'; // Muestra el indicador de carga
 
-    const formData = new FormData(this); // Crear un objeto FormData con los datos del formulario
-
-    fetch('http://localhost/Intellilearn/PHP/iniciarSesion.php', {
+    fetch('http://localhost/IntelliLearn/PHP/iniciarSesion.php', {
         method: 'POST',
         body: formData
     })
     .then(response => response.text())
     .then(data => {
-        loadingIndicator.style.display = 'none'; // Ocultar el indicador de carga
-        if (data === "Inicio de sesión exitoso") {
-            window.location.href = 'http://localhost/Intellilearn/HTML/lecciones.html';
+        loadingIndicator.style.display = 'none'; // Ocultar indicador de carga
+        if (data.trim() === "Inicio de sesión exitoso") {
+            // Redirigir al usuario si el inicio fue exitoso
+            window.location.href = 'http://localhost/IntelliLearn/HTML/lecciones.html';
         } else {
+            // Mostrar error
             alert(data);
         }
     })
     .catch(error => {
-        loadingIndicator.style.display = 'none'; // Ocultar el indicador de carga en caso de error
-        console.error('Error:', error);
+        loadingIndicator.style.display = 'none';
+        console.error("Error en la petición:", error);
+        alert("Ocurrió un error al procesar la solicitud.");
     });
 });

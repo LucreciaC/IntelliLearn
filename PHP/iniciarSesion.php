@@ -1,51 +1,60 @@
 <?php
+ob_start(); // Inicia el almacenamiento en búfer
 session_start();
+include 'C:/xampp/htdocs/IntelliLearn/PHP/conexion.php';
 
-// Verifica si el formulario fue enviado
+// Habilitar depuración
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recoge los datos del formulario
-    $username = $_POST['NombreUsuario'];
-    $password = $_POST['Contraseña'];
+    $username = trim($_POST['NombreUsuario']);
+    $password = trim($_POST['Contraseña']);
 
-    // Depuración: Verifica los valores recibidos
-    echo "Contraseña ingresada desde el formulario: " . $password . "<br>";  // Muestra la contraseña ingresada
-
-    // Conexión a la base de datos
-    include 'C:/xampp/htdocs/IntelliLearn/PHP/conexion.php';
-
-    // Consulta SQL para verificar el usuario
-    $sql = "SELECT * FROM usuarios WHERE NombreUsuario = ?";
+    // Consulta SQL para verificar el usuario y su rol
+    $sql = "SELECT idUsuarios, NombreUsuario, Contraseña, rol FROM usuarios WHERE NombreUsuario = ?";
     $stmt = $conexion->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Si el usuario existe
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Depuración: Muestra el hash de la contraseña almacenada
-        echo "Contraseña almacenada (hash): " . $user['Contraseña'] . "<br>";
+        // Verificación de datos recuperados
+        $rol = (int)$user['rol']; // Convertir explícitamente el rol a entero
+        echo "DEBUG - Rol recuperado de la base de datos: " . $rol . "<br>";
 
-        // Verifica la contraseña con password_verify()
+        // Verificar contraseña
         if (password_verify($password, $user['Contraseña'])) {
-            // Si la contraseña es correcta, iniciar sesión
             $_SESSION['user_id'] = $user['idUsuarios'];
             $_SESSION['username'] = $user['NombreUsuario'];
+            $_SESSION['rol'] = $rol;
 
-            // Redirigir al usuario a la página de lecciones
-            header("Location: http://localhost/IntelliLearn/HTML/lecciones.html");
-            exit();
+            // Redirigir según el rol
+            if ($rol === 0) { // Estudiante
+                echo "DEBUG - Redirigiendo a lecciones.html<br>";
+                header("Location: http://localhost/IntelliLearn/HTML/lecciones.html");
+                exit();
+            } elseif ($rol === 1) { // Profesor
+                echo "DEBUG - Redirigiendo a panelProfesor.html<br>";
+                header("Location: http://localhost/IntelliLearn/HTML/panelProfesor.html");
+                exit();
+            } else {
+                echo "DEBUG - Rol desconocido: " . $rol;
+                exit();
+            }
         } else {
-            // Si la contraseña es incorrecta
-            echo "Contraseña incorrecta.";
+            echo "DEBUG - Contraseña incorrecta.";
+            exit();
         }
     } else {
-        // Si el usuario no existe
-        echo "El usuario no existe.";
+        echo "DEBUG - El usuario no existe.";
+        exit();
     }
 
     $stmt->close();
     $conexion->close();
 }
+ob_end_flush();
 ?>
