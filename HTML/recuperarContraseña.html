@@ -14,15 +14,12 @@
         </a>
     </div>
     <div class="container">
-     <h2>
-      Recuperar contraseña
-     </h2>
-     <input placeholder="Correo electronico" type="email"/>
-     <input placeholder="Nombre de usuario" type="text"/>
-     
-     <button class="register-button">
-      Enviar
-     </button>
-     
+        <h2>Recuperar contraseña</h2>
+        <form method="POST" action="http://localhost/Intellilearn/PHP/recuperarContraseña.php">
+            <input name="email" placeholder="Correo electrónico" type="email" required />
+            <input name="username" placeholder="Nombre de usuario" type="text" required />
+            <button type="submit" class="register-button">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
